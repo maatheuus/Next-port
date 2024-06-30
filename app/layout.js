@@ -1,12 +1,13 @@
-import { Inter } from "next/font/google";
-
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-});
+import { Baloo_2 } from "next/font/google";
 
 import "@/app/_styles/globals.css";
 import Header from "@/app/_components/Header";
+
+const baloo = Baloo_2({
+  subsets: ["latin"],
+  display: "swap",
+  weight: "500",
+});
 
 export const metadata = {
   title: {
@@ -19,9 +20,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className}`}>
+      <body className={`${baloo.className} bg-stone-100`}>
         <Header />
-        <main>{children}</main>
+        <div className="flex-1 px-8 py-10 grid">
+          <main className="max-w-7xl mx-auto w-full">{children}</main>
+        </div>
       </body>
     </html>
   );

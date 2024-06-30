@@ -6,4 +6,7 @@
   body {
     @apply bg-stone-100;
   }
+  .text-hover {
+    @apply hover:text-hoverColor transition-all hover:duration-300 hover:-translate-y-1;
+  }
 }
