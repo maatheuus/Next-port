@@ -6,7 +6,7 @@ function Header() {
   const nameHeader = "<Matheus />";
 
   return (
-    <header className="px-8 py-4 border-b border-black text-lg">
+    <header className="px-8 py-4 border-b border-black text-2xl">
       <div className="flex justify-between items-center max-w-7xl mx-auto">
         <h1>
           <Link href="/">{nameHeader}</Link>

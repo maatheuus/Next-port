@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer utilities {
+  html {
+    font-size: 62.5%;
+  }
   body {
     @apply bg-stone-100;
   }
