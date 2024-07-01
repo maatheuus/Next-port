@@ -23,18 +23,8 @@ function Skills() {
     { src: sass, alt: "Sass logo" },
   ];
   return (
-    <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
-      <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-14 animate-infinite-scroll">
-        {logos.map((logo, index) => (
-          <li key={index}>
-            <Image src={logo.src} alt={logo.alt} />
-          </li>
-        ))}
-      </ul>
-      <ul
-        className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-14 animate-infinite-scroll"
-        aria-hidden="true"
-      >
+    <div>
+      <ul className="flex flex-wrap items-center justify-center gap-10 mt-10 [&_img]:max-w-12">
         {logos.map((logo, index) => (
           <li key={index}>
             <Image src={logo.src} alt={logo.alt} />

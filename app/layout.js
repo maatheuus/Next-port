@@ -22,8 +22,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${baloo.className} bg-stone-100`}>
         <Header />
-        <div className="flex-1 px-8 py-10 grid">
-          <main className="max-w-7xl mx-auto w-full">{children}</main>
+        <div className="w-full">
+          <main className="max-w-7xl mx-auto p-8 md:w-full">{children}</main>
         </div>
       </body>
     </html>
