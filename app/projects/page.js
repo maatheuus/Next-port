@@ -3,13 +3,8 @@ import { projects } from "@/app/_util/utility.js";
 
 function Page() {
   return (
-    <section>
+    <section className="w-full h-full bg-stone-100">
       {projects.map((project) => {
-        const technology = {
-          tech: project.technologyUsed,
-          style: project.style,
-        };
-
         return (
           <Projects
             key={project.id}
@@ -20,8 +15,8 @@ function Page() {
             liveDemoUrl={project.liveDemoUrl}
             existLiveDemo={project.existLiveDemo}
             seeOnGithubUrl={project.seeOnGithubUrl}
-            invertImage={project.invertImage}
-            technology={technology}
+            reverseRow={project.invertImage}
+            technologies={project.technologies}
           />
         );
       })}

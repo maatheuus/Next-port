@@ -10,6 +10,9 @@ module.exports = {
       textColor: {
         hoverColor: "#a1ce5f",
       },
+      borderColor: {
+        borderHover: "#a1ce5f",
+      },
       animation: {
         "infinite-scroll": "infinite-scroll 25s linear infinite",
       },

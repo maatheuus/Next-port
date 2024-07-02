@@ -7,7 +7,7 @@ function Header() {
 
   return (
     <header className="px-8 py-4 text-2xl">
-      <div className="px-4 flex justify-between items-center max-w-7xl mx-auto">
+      <div className="px-4 flex flex-wrap justify-between items-center max-w-7xl mx-auto">
         <h1>
           <Link href="/">{nameHeader}</Link>
         </h1>

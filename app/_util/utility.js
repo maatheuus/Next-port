@@ -1,6 +1,6 @@
 import trillo from "@/public/hotel-trillo.png";
 import weather from "@/public/weather.png";
-import fastPizza from "@/public/react-fastpizza.png";
+import fastPizza from "@/public/react-fast-pizza.png";
 import vacationPlans from "@/public/vactions-plan.png";
 import bookLife from "@/public/book-life.png";
 
@@ -8,7 +8,7 @@ export const projects = [
   {
     id: 1,
     invertImage: false,
-    numberProject: "02",
+    numberProject: "01",
     title: "Vacation Plans",
     description:
       "Vacation Plans foi criado para suprir a necessidade de gerenciar as férias dos seus funcionários. Com autenticação, formulários, real-time data essa aplicação supre boa parte da sua necessidade.",
@@ -16,13 +16,12 @@ export const projects = [
     liveDemoUrl: "https://vactions-plan.vercel.app/",
     existLiveDemo: true,
     seeOnGithubUrl: "https://github.com/maatheuus/VactionPlan",
-    technologyUsed: ["FaReact"],
-    style: "Sass",
+    technologies: ["react", "javaScript", "supabase", "tailwind"],
   },
   {
     id: 2,
     invertImage: true,
-    numberProject: "01",
+    numberProject: "02",
     title: "Trillo Hotel",
     description:
       "Este site foi feito para facilitar a busca por hotéis, proporcionando uma experiência intuitiva aos usuários. Nele é possível pesquisar a cidade que deseja do Brasil e escolher qualquer hotel disponível para aquela região e salvar para mais tarde caso queria pesquisar o hotel depois.",
@@ -30,28 +29,32 @@ export const projects = [
     liveDemoUrl: "https://hotelstrillo.netlify.app/",
     existLiveDemo: true,
     seeOnGithubUrl: "https://github.com/maatheuus/Trillo-Hotel",
-    technologyUsed: ["FaJs"],
-    style: "Sass",
+    technologies: ["javaScript", "sass", "html"],
   },
 
   {
     id: 3,
-    invertImage: true,
+    invertImage: false,
     numberProject: "03",
-
     title: "Book Life",
     description:
-      "Fast Pizza é um site de estudo onde você pode escolher dentre diversas opções de pizzas com um layout amigável e um formulário para pegar seu endereço automaticamente (caso você permita) e seu número de celular.",
+      "Book Life é um projeto pessoal onde você pode pesquisar por diversos livros e salva-los em sua conta, na qual você pode criar gratuitamente ou entra em uma já existente.",
     image: bookLife,
     liveDemoUrl: "https://book-life.vercel.app/",
     existLiveDemo: true,
     seeOnGithubUrl: "https://github.com/maatheuus/Book-Life",
-    technologyUsed: ["FaReact"],
-    style: "Tailwind",
+    technologies: [
+      "react",
+      "javaScript",
+      "nodeJs",
+      "express",
+      "mongoDB",
+      "tailwind",
+    ],
   },
   {
     id: 4,
-    invertImage: false,
+    invertImage: true,
     numberProject: "04",
     title: "Fast React Pizza",
     description:
@@ -60,8 +63,7 @@ export const projects = [
     liveDemoUrl: "https://react-fastpizza.netlify.app/",
     existLiveDemo: true,
     seeOnGithubUrl: "https://github.com/maatheuus/Fast-React-Pizza",
-    technologyUsed: ["FaReact"],
-    style: "Tailwind",
+    technologies: ["react", "redux", "javaScript", "tailwind"],
   },
   {
     id: 5,
@@ -74,8 +76,7 @@ export const projects = [
     liveDemoUrl: "https://maatheuus.github.io/WeatherApp/",
     existLiveDemo: true,
     seeOnGithubUrl: "https://github.com/maatheuus/WeatherApp",
-    technologyUsed: ["FaJs"],
-    style: "Css",
+    technologies: ["javaScript", "html", "css"],
   },
 ];
 /**
@@ -89,7 +90,6 @@ export const projects = [
   //   image: foodApp,
   //   existLiveDemo: false,
   //   seeOnGithubUrl: "https://github.com/maatheuus/ReactFood",
-  //   technologyUsed: ["FaReact", "FaNodeJs"],
-  //   style: "Css",
+  //   technologies: ["FaReact", "FaNodeJs"],
   // },
  */
