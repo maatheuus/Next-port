@@ -2,6 +2,7 @@ import Image from "next/image";
 import Skills from "@/app/_components/Skills.js";
 
 import profilePhoto from "@/public/profile-photo.png";
+import Footer from "../_components/Footer";
 
 export const metadata = {
   title: "About",
@@ -50,6 +51,7 @@ function Page() {
             alt="Profile photo"
           />
         </div>
+        <Footer label="Ver meus projetos" to="/projects" />
       </div>
     </section>
   );

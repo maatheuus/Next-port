@@ -14,6 +14,64 @@
   }
 }
 
+@layer utilities {
+  .image-hover {
+    @apply relative cursor-pointer object-cover h-[400px] overflow-hidden bg-center 
+    py-[1.8rem] px-8 flex items-end break-inside-avoid bg-no-repeat;
+    margin: 0px 0px 1.5em;
+    background-color: #0000;
+  }
+
+  .image-hover::before {
+    content: "";
+    @apply pointer-events-none inset-0 -z-10 absolute block;
+    background: radial-gradient(
+      circle,
+      white 10%,
+      whitesmoke 11%,
+      whitesmoke 100%
+    );
+  }
+
+  .image-hover::after {
+    content: "";
+    @apply pointer-events-none absolute z-10 inset-0 opacity-[0.3];
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.1) 10%,
+      rgba(0, 0, 0, 0.78) 80%
+    );
+  }
+
+  .image-hover img {
+    @apply absolute object-cover rounded-xl;
+    width: 100% !important;
+    height: 100% !important;
+    left: 0px !important;
+    top: 0px !important;
+  }
+
+  .content-hidden {
+    @apply opacity-100 translate-y-[10%] min-[650px]:opacity-0;
+    transition: opacity 300ms ease-in-out 0s, transform 300ms ease-in-out 0s;
+  }
+
+  .image-hover:hover::after {
+    opacity: 1;
+  }
+
+  .image-hover:hover .content-hidden {
+    z-index: 20;
+    transform: none;
+    opacity: 1;
+  }
+
+  @media (max-width: 650px) {
+    .image-hover::after {
+      opacity: 1;
+    }
+  }
+}
+
 @layer components {
   .spinner {
     margin: 3.2rem auto 1.6rem;
@@ -23,6 +81,41 @@
     border: 8px solid black;
     border-right-color: gray;
     animation: rotate 1s infinite linear;
+  }
+
+  .forward {
+    margin-left: 2rem;
+    animation-name: forward;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  .fadeLeft {
+    animation-name: fadeLeft;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+  }
+
+  @keyframes fadeLeft {
+    0% {
+      opacity: 0.8;
+      transform: translateX(80%);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
+
+  @keyframes forward {
+    0% {
+      margin-left: 1rem;
+    }
+    100% {
+      margin-right: 0rem;
+    }
   }
 
   @keyframes rotate {

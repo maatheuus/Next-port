@@ -1,20 +1,17 @@
-import Link from "next/link";
+import { ActiveLink } from "./ActiveLink";
 
 function Navigation() {
   return (
-    <nav className="z-10 ">
+    <nav className="z-10">
       <ul className="flex gap-5 items-center">
         <li className="text-hover">
-          <Link href="/">Home</Link>
+          <ActiveLink href="/about">Sobre</ActiveLink>
         </li>
         <li className="text-hover">
-          <Link href="/about">Sobre</Link>
+          <ActiveLink href="/projects">Projetos</ActiveLink>
         </li>
         <li className="text-hover">
-          <Link href="/projects">Projetos</Link>
-        </li>
-        <li className="text-hover">
-          <Link href="/contact">Contato</Link>
+          <ActiveLink href="/contact">Contato</ActiveLink>
         </li>
       </ul>
     </nav>
