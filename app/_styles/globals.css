@@ -17,7 +17,7 @@
 @layer utilities {
   .image-hover {
     @apply relative cursor-pointer object-cover h-[400px] overflow-hidden bg-center 
-    py-[1.8rem] px-8 flex items-end break-inside-avoid bg-no-repeat;
+    py-[1.8rem] px-8 flex items-end break-inside-avoid bg-no-repeat rounded-xl;
     margin: 0px 0px 1.5em;
     background-color: #0000;
   }
@@ -43,7 +43,7 @@
   }
 
   .image-hover img {
-    @apply absolute object-cover rounded-xl;
+    @apply absolute object-cover overflow-hidden;
     width: 100% !important;
     height: 100% !important;
     left: 0px !important;

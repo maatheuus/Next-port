@@ -1,31 +1,35 @@
 "use client";
-import Link from "next/link";
-import { twMerge } from "tailwind-merge";
-import { FaGithub, FaLocationArrow } from "react-icons/fa";
-import { useEffect, useState } from "react";
-import { createPortal } from "react-dom";
 
-function SideBar({ isModalOpen }) {
+import { useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
+import LayoutModal from "./LayoutModal";
+import { projects } from "../_util/utility";
+
+function SideBar({ isModalOpen, closeModal, id }) {
+  const modalRef = useRef();
+  const curProject = projects.find((project) => project.id === id);
+
   useEffect(() => {
     if (isModalOpen) {
+      modalRef.current.showModal();
       document.body.style.overflow = "hidden";
     } else {
+      modalRef.current.close();
       document.body.style.overflow = "auto";
     }
   }, [isModalOpen]);
 
-  return (
-    <div className="cursor-default">
-      <div className="bg-stone-900/20 fixed top-0 right-0 w-screen h-screen z-[9999]"></div>
+  return createPortal(
+    <dialog ref={modalRef} className="cursor-default" onClose={closeModal}>
+      <div className="bg-stone-900/50 fixed top-0 right-0 w-screen h-screen z-[9999]"></div>
       <aside
-        className="fixed top-0 right-0 z-[99999] w-[34rem] h-full bg-stone-950 fadeLeft transition-all duration-200 ease-linear"
+        className="fixed top-0 right-0 z-[99999] w-[470px] h-full bg-stone-950 fadeLeft transition-all duration-200 ease-linear"
         aria-label="Sidebar"
       >
-        <div class="max-h-full overflow-x-auto px-3 py-4">
-          <h1 className="text-white">OPEN</h1>
-        </div>
+        <LayoutModal project={curProject} onClick={closeModal} />
       </aside>
-    </div>
+    </dialog>,
+    document.getElementById("modal")
   );
 }
 

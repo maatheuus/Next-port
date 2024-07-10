@@ -13,9 +13,7 @@ function Page() {
     <section className="h-full mt-10">
       <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-0">
         <div className="text-2xl w-full gap-4">
-          <h1 className="text-4xl mb-4">
-            <span>Sobre</span> <span>Mim</span>
-          </h1>
+          <h1 className="text-5xl font-bold mb-4">Sobre mim.</h1>
           <p className="hyphens-auto mb-2">
             E aí! Sou um entusiasta de tecnologia viciado em programação, hoje
             eu sou um <strong>Full-Stack</strong> e apaixonado por basquete,

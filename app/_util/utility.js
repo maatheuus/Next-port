@@ -7,44 +7,41 @@ import bookLife from "@/public/book-life.png";
 export const projects = [
   {
     id: 1,
-    invertImage: false,
-    numberProject: "01",
     title: "Vacation Plans",
+    classImg: "!w-[340px] !h-[298px]",
     description:
+      "Um ótimo lugar para gerenciar as férias de seus funcionários e poder marcar as suas",
+    about:
       "Vacation Plans foi criado para suprir a necessidade de gerenciar as férias dos seus funcionários. Com autenticação, formulários, real-time data essa aplicação supre boa parte da sua necessidade.",
     image: vacationPlans,
-    liveDemoUrl: "https://vactions-plan.vercel.app/",
-    existLiveDemo: true,
-    seeOnGithubUrl: "https://github.com/maatheuus/VactionPlan",
-    technologies: ["react", "javaScript", "supabase", "tailwind"],
+    link: "https://vactions-plan.vercel.app/",
+    github: "https://github.com/maatheuus/VactionPlan",
+    technologies: ["react & react query", "javaScript", "supabase", "tailwind"],
   },
   {
     id: 2,
-    invertImage: true,
-    numberProject: "02",
     title: "Trillo Hotel",
-    description:
+    description: "Procure por hotéis em todo o Brasil",
+    classImg: "!w-[334px] !h-[358px]",
+    about:
       "Este site foi feito para facilitar a busca por hotéis, proporcionando uma experiência intuitiva aos usuários. Nele é possível pesquisar a cidade que deseja do Brasil e escolher qualquer hotel disponível para aquela região e salvar para mais tarde caso queria pesquisar o hotel depois.",
     image: trillo,
-    liveDemoUrl: "https://hotelstrillo.netlify.app/",
-    existLiveDemo: true,
-    seeOnGithubUrl: "https://github.com/maatheuus/Trillo-Hotel",
-    technologies: ["javaScript", "sass", "html"],
+    link: "https://hotelstrillo.netlify.app/",
+    github: "https://github.com/maatheuus/Trillo-Hotel",
+    technologies: ["javaScript", "sass & css", "html"],
   },
-
   {
     id: 3,
-    invertImage: false,
-    numberProject: "03",
     title: "Book Life",
-    description:
+    classImg: "!w-[335px] !h-[251px]",
+    description: "O website certo para você procurar por seus livros favoritos",
+    about:
       "Book Life é um projeto pessoal onde você pode pesquisar por diversos livros e salva-los em sua conta, na qual você pode criar gratuitamente ou entra em uma já existente.",
     image: bookLife,
-    liveDemoUrl: "https://book-life.vercel.app/",
-    existLiveDemo: true,
-    seeOnGithubUrl: "https://github.com/maatheuus/Book-Life",
+    link: "https://book-life.vercel.app/",
+    github: "https://github.com/maatheuus/Book-Life",
     technologies: [
-      "react",
+      "react & react query",
       "javaScript",
       "nodeJs",
       "express",
@@ -54,28 +51,28 @@ export const projects = [
   },
   {
     id: 4,
-    invertImage: true,
-    numberProject: "04",
     title: "Fast React Pizza",
+    classImg: "!h-[361px]",
     description:
+      "Um lugar onde você pode passar vontade junto comigo por uma pizza ;)",
+    about:
       "Fast Pizza é um site de estudo onde você pode escolher dentre diversas opções de pizzas com um layout amigável e um formulário para pegar seu endereço automaticamente (caso você permita) e seu número de celular.",
     image: fastPizza,
-    liveDemoUrl: "https://react-fastpizza.netlify.app/",
-    existLiveDemo: true,
-    seeOnGithubUrl: "https://github.com/maatheuus/Fast-React-Pizza",
+    link: "https://react-fastpizza.netlify.app/",
+    github: "https://github.com/maatheuus/Fast-React-Pizza",
     technologies: ["react", "redux", "javaScript", "tailwind"],
   },
   {
     id: 5,
-    invertImage: false,
-    numberProject: "05",
     title: "Weather App",
+    classImg: "!w-[298px] !h-[318px]",
     description:
+      "Procure a previsão do tempo na sua cidade ou em qualquer lugar do mundo",
+    about:
       "Esse site foi feito para facilitar quando você quiser saber como anda o clima na sua cidade ou em qualquer cidade do mundo. Com um design minimalista e agradável você se encontra fácil no site. (informações em inglês, até o momento)",
     image: weather,
-    liveDemoUrl: "https://maatheuus.github.io/WeatherApp/",
-    existLiveDemo: true,
-    seeOnGithubUrl: "https://github.com/maatheuus/WeatherApp",
+    link: "https://maatheuus.github.io/WeatherApp/",
+    github: "https://github.com/maatheuus/WeatherApp",
     technologies: ["javaScript", "html", "css"],
   },
 ];
@@ -85,11 +82,11 @@ export const projects = [
   //   invertImage: false,
   //   numberProject: "04",
   //   title: "ReactFood",
-  //   description:
+  //   about:
   //     "ReactFood é um site aonde você pode escolher dentre diversas opções de comidas com um layout amigável e um formulário para inserir seus dados e fazer o pedido. Para mais detalhes de como iniciar, veja no github.",
   //   image: foodApp,
   //   existLiveDemo: false,
-  //   seeOnGithubUrl: "https://github.com/maatheuus/ReactFood",
+  //   github: "https://github.com/maatheuus/ReactFood",
   //   technologies: ["FaReact", "FaNodeJs"],
   // },
  */

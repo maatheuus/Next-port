@@ -21,6 +21,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${baloo.className} bg-stone-100`}>
+        <div id="modal"></div>
         <Header />
         <div className="w-full">
           <main className="max-w-7xl mx-auto py-8 px-12 md:w-full">

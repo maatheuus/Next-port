@@ -1,45 +1,36 @@
 "use client";
 
-import Projects from "@/app/_components/Projects";
-import { projects } from "@/app/_util/utility.js";
-import Footer from "../_components/Footer";
 import { useState } from "react";
-import { Box, Modal } from "@material-ui/core";
-
-const style = {
-  position: "absolute",
-  top: "0",
-  right: "0",
-  bgcolor: "black",
-  width: "34rem",
-  height: "100%",
-  zIndex: "99999",
-  boxShadow: 24,
-};
+import { projects } from "@/app/_util/utility.js";
+import Footer from "@/app/_components/Footer";
+import Projects from "@/app/_components/Projects";
+import SideBar from "@/app/_components/SideBar";
 
 function Page() {
   const [open, setOpen] = useState(false);
+  const [idProject, setIdProject] = useState();
 
   const openModal = () => setOpen(true);
   const closeModal = () => setOpen(false);
 
   return (
     <>
-      <div className="w-full h-full bg-stone-100">
-        <h1 className="text-5xl font-bold">Projects.</h1>
-        <section className="columns-1 min-[710px]:columns-2">
+      <div className="w-full h-full ">
+        <h1 className="text-5xl font-bold">Projetos.</h1>
+        <section className="columns-1 mt-12 min-[710px]:columns-2">
           {projects.map((project) => {
             return (
               <button
                 key={project.id}
-                className="border-none"
+                className="px-6 mb-10"
                 onClick={() => {
-                  setOpen(!open);
-                  console.log(project.id);
+                  openModal();
+                  setIdProject(project.id);
                 }}
               >
                 <Projects
                   open={open}
+                  classImg={project.classImg}
                   title={project.title}
                   description={project.description}
                   image={project.image}
@@ -48,13 +39,11 @@ function Page() {
               </button>
             );
           })}
-          {/* <Modal open={open} onClose={closeModal}>
-            <Box sx={style}>
-              <p className="text-white">Text in a modal</p>
-            </Box>
-          </Modal> */}
         </section>
       </div>
+      {open && (
+        <SideBar isModalOpen={open} id={idProject} closeModal={closeModal} />
+      )}
 
       <Footer label="Entre em contato comigo" to="/contact" />
     </>
