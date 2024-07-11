@@ -15,14 +15,14 @@ function Page() {
 
   return (
     <>
-      <div className="w-full h-full ">
+      <div className="w-full h-full">
         <h1 className="text-5xl font-bold">Projetos.</h1>
-        <section className="columns-1 mt-12 min-[710px]:columns-2">
+        <section className="w-full columns-1 mt-12 min-[785px]:columns-2">
           {projects.map((project) => {
             return (
               <button
                 key={project.id}
-                className="px-6 mb-10"
+                className="px-6 mb-10 w-full"
                 onClick={() => {
                   openModal();
                   setIdProject(project.id);
@@ -42,7 +42,7 @@ function Page() {
         </section>
       </div>
       {open && (
-        <SideBar isModalOpen={open} id={idProject} closeModal={closeModal} />
+        <SideBar id={idProject} closeModal={closeModal} isModalOpen={open} />
       )}
 
       <Footer label="Entre em contato comigo" to="/contact" />

@@ -12,8 +12,10 @@ function Page() {
                 <span>Matheus.</span>
               </h1>
               <p className="text-2xl py-4">
-                Desenvolvedor <strong className="uppercase">Full-Stack</strong>{" "}
-                apaixonado por programação, sempre codando com entusiasmo.
+                Seu amigo desenvolvedor{" "}
+                <strong className="uppercase">Full-Stack</strong> apaixonado por
+                programação, que está sempre codando com entusiasmo e um café do
+                lado.
               </p>
             </div>
           </article>

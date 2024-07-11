@@ -1,4 +1,5 @@
 import Input from "@/app/_components/Input";
+import Footer from "../_components/Footer";
 
 export const metadata = {
   title: "Contact",
@@ -6,19 +7,26 @@ export const metadata = {
 
 function Page() {
   return (
-    <section className="w-full h-[86vh] flex justify-center">
-      <div className="w-4/5 flex items-center flex-col justify-around gap-10 md:flex-row ">
-        <div className="h-[27rem] w-[25rem]">
+    <section className="w-full">
+      <div className="w-full min-[355px]:w-4/5 flex flex-col gap-6 mr-auto p-4 sm:p-10 sm:mx-auto">
+        <h1 className="text-5xl font-bold">Contato.</h1>
+        <div>
+          <p className="text-base min-[370px]:text-xl text-stone-600">
+            Mande uma mensagem por aqui ou diretamente{" "}
+            <b> matts14smkd@gmail.com</b>.
+          </p>
+        </div>
+        <div>
           <form
             action="https://formsubmit.co/matts14smkd@gmail.com"
             method="POST"
-            className="flex flex-col p-1 justify-end h-full md:justify-start"
+            className="flex flex-col  justify-end h-full md:justify-start"
           >
             <Input
               name="name"
               type="text"
               autoComplete="on"
-              placeholder="Seu nome"
+              placeholder="Nome"
             />
 
             <Input
@@ -31,13 +39,13 @@ function Page() {
             <Input
               type="textarea"
               name="description"
+              classInput="pb-48"
               autoComplete="on"
               placeholder="Como posso ajudar?"
             />
-            <div className="my-4">
+            <div className="mt-4">
               <button
-                className="bg-stone-950 text-stone-50 p-2 w-32 border-none transition-all 
-                duration-300 hover:-translate-y-1"
+                className="bg-stone-800 text-stone-100 text-xl px-6 py-3 w-36 transition-all duration-300 hover:bg-stone-950"
                 type="submit"
               >
                 Enviar
@@ -48,15 +56,9 @@ function Page() {
         </div>
 
         {/*FOOTER */}
-        <div className="flex-1 h-[27rem] w-[34rem] flex flex-col p-2 gap-3 order-1">
-          <h1 className="text-4xl">
-            Vamos <span className="font-900 text-zinc-500">conversar</span> para{" "}
-            <span className="block">Algo especial</span>
-          </h1>
-          <p className="font-800 text-2xl text-zinc-400">
-            matts14smkd@gmail.com
-          </p>
-        </div>
+
+        <Footer label="Voltar para home" to="/" />
+
         <footer className="h-full flex items-end justify-end">
           <p className="mr-2">@2024 Matheus</p>
           <p>&copy; All the right reserved</p>

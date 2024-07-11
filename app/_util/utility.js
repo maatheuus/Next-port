@@ -8,9 +8,9 @@ export const projects = [
   {
     id: 1,
     title: "Vacation Plans",
-    classImg: "!w-[340px] !h-[298px]",
+    classImg: " !h-[298px]",
     description:
-      "Um ótimo lugar para gerenciar as férias de seus funcionários e poder marcar as suas",
+      "Um ótimo lugar para gerenciar as férias de seus funcionários e poder marcar as suas férias",
     about:
       "Vacation Plans foi criado para suprir a necessidade de gerenciar as férias dos seus funcionários. Com autenticação, formulários, real-time data essa aplicação supre boa parte da sua necessidade.",
     image: vacationPlans,
@@ -22,7 +22,7 @@ export const projects = [
     id: 2,
     title: "Trillo Hotel",
     description: "Procure por hotéis em todo o Brasil",
-    classImg: "!w-[334px] !h-[358px]",
+    classImg: "!h-[358px]",
     about:
       "Este site foi feito para facilitar a busca por hotéis, proporcionando uma experiência intuitiva aos usuários. Nele é possível pesquisar a cidade que deseja do Brasil e escolher qualquer hotel disponível para aquela região e salvar para mais tarde caso queria pesquisar o hotel depois.",
     image: trillo,
@@ -33,7 +33,7 @@ export const projects = [
   {
     id: 3,
     title: "Book Life",
-    classImg: "!w-[335px] !h-[251px]",
+    classImg: " !h-[251px]",
     description: "O website certo para você procurar por seus livros favoritos",
     about:
       "Book Life é um projeto pessoal onde você pode pesquisar por diversos livros e salva-los em sua conta, na qual você pode criar gratuitamente ou entra em uma já existente.",
@@ -65,7 +65,7 @@ export const projects = [
   {
     id: 5,
     title: "Weather App",
-    classImg: "!w-[298px] !h-[318px]",
+    classImg: " !h-[318px]",
     description:
       "Procure a previsão do tempo na sua cidade ou em qualquer lugar do mundo",
     about:

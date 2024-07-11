@@ -1,8 +1,8 @@
+import Link from "next/link";
 import Image from "next/image";
 import { RiArrowLeftCircleLine, RiGithubFill } from "react-icons/ri";
 import { BiWorld } from "react-icons/bi";
 import styled from "styled-components";
-import Link from "next/link";
 
 function LayoutModal({ project, onClick }) {
   const { title, link, github, technologies, image, about, description } =
@@ -22,7 +22,7 @@ function LayoutModal({ project, onClick }) {
       </div>
       <div>
         <Image
-          className="object-cover overflow-hidden w-full h-fit rounded-lg"
+          className="object-cover overflow-hidden w-full h-full rounded-lg"
           src={image}
           alt="image of the project"
           placeholder="blur"

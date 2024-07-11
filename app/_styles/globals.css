@@ -16,10 +16,11 @@
 
 @layer utilities {
   .image-hover {
-    @apply relative cursor-pointer object-cover h-[400px] overflow-hidden bg-center 
+    @apply relative cursor-pointer object-cover h-[400px] overflow-hidden
     py-[1.8rem] px-8 flex items-end break-inside-avoid bg-no-repeat rounded-xl;
     margin: 0px 0px 1.5em;
     background-color: #0000;
+    background-position: center center;
   }
 
   .image-hover::before {
@@ -44,6 +45,7 @@
 
   .image-hover img {
     @apply absolute object-cover overflow-hidden;
+    vertical-align: middle;
     width: 100% !important;
     height: 100% !important;
     left: 0px !important;
@@ -51,7 +53,7 @@
   }
 
   .content-hidden {
-    @apply opacity-100 translate-y-[10%] min-[650px]:opacity-0;
+    @apply opacity-100 translate-y-[10%] min-[785px]:opacity-0;
     transition: opacity 300ms ease-in-out 0s, transform 300ms ease-in-out 0s;
   }
 
@@ -65,8 +67,13 @@
     opacity: 1;
   }
 
-  @media (max-width: 650px) {
+  @media (max-width: 785px) {
     .image-hover::after {
+      opacity: 1;
+    }
+    .image-hover .content-hidden {
+      z-index: 20;
+      transform: none;
       opacity: 1;
     }
   }

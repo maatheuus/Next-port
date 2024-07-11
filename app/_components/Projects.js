@@ -9,9 +9,11 @@ function Projects(props) {
       <div className={twMerge("image-hover", classImg)}>
         <Image
           src={image}
-          alt="image of the project"
-          placeholder="blur"
           loading="lazy"
+          alt={`image of the ${title}`}
+          placeholder="blur"
+          height={500}
+          width={500}
         />
         <div className="content-hidden flex flex-col text-left gap-7">
           <h1 className="text-stone-50 text-3xl font-semibold">{title}</h1>
