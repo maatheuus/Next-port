@@ -2,7 +2,7 @@ import trillo from "@/public/hotel-trillo.png";
 import weather from "@/public/weather.png";
 import fastPizza from "@/public/react-fast-pizza.png";
 import vacationPlans from "@/public/vactions-plan.png";
-import bookLife from "@/public/book-life.png";
+import bookLife from "@/public/book-life-2.png";
 
 export const projects = [
   {
