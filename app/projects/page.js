@@ -1,52 +1,23 @@
-"use client";
-
-import { useState } from "react";
-import { projects } from "@/app/_util/utility.js";
+import { Suspense } from "react";
 import Footer from "@/app/_components/Footer";
-import Projects from "@/app/_components/Projects";
-import SideBar from "@/app/_components/SideBar";
+import Spinner from "@/app/_components/Spinner";
+import HandleProjects from "@/app/_components/HandleProjects";
+
+export const metadata = {
+  title: "Projects",
+};
 
 function Page() {
-  const [open, setOpen] = useState(false);
-  const [idProject, setIdProject] = useState();
-
-  const openModal = () => setOpen(true);
-  const closeModal = () => setOpen(false);
-
   return (
-    <>
-      <div className="w-full h-full">
-        <h1 className="text-5xl font-bold">Projetos.</h1>
-        <section className="w-full columns-1 mt-12 min-[785px]:columns-2">
-          {projects.map((project) => {
-            return (
-              <button
-                key={project.id}
-                className="px-6 mb-10 w-full"
-                onClick={() => {
-                  openModal();
-                  setIdProject(project.id);
-                }}
-              >
-                <Projects
-                  open={open}
-                  classImg={project.classImg}
-                  title={project.title}
-                  description={project.description}
-                  image={project.image}
-                  technologies={project.technologies}
-                />
-              </button>
-            );
-          })}
-        </section>
-      </div>
-      {open && (
-        <SideBar id={idProject} closeModal={closeModal} isModalOpen={open} />
-      )}
-
+    <div className="w-full h-full">
+      <h1 className="text-5xl font-bold">Projetos.</h1>
+      <section className="w-full columns-1 mt-12 min-[785px]:columns-2">
+        <Suspense fallback={<Spinner />}>
+          <HandleProjects />
+        </Suspense>
+      </section>
       <Footer label="Entre em contato comigo" to="/contact" />
-    </>
+    </div>
   );
 }
 

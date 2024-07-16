@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 
-function Projects(props) {
+function ProjectsDetails(props) {
   const { title, description, image, technologies, classImg } = props;
 
   return (
@@ -36,4 +36,4 @@ function Projects(props) {
   );
 }
 
-export default Projects;
+export default ProjectsDetails;
