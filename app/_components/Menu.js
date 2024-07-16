@@ -1,16 +1,20 @@
-import Link from "next/link";
-import ToggleTheme from "@/app/_components/ToggleTheme";
-import { useOpenMenu } from "@/app/_context/MenuContext";
 import { FaXmark } from "react-icons/fa6";
+import { useOpenMenu } from "@/app/_context/MenuContext";
+import ToggleTheme from "@/app/_components/ToggleTheme";
+import ButtonIcon from "@/app/_components/ButtonIcon";
+import Button from "@/app/_components/Button";
 
 function Menu() {
   const { closeMenu } = useOpenMenu();
   return (
     <menu className="fixed top-0 left-0 w-svw h-svh z-30 fadeTopToBottom transition-all bg-background ease-linear">
       <div className="relative h-[8rem]">
-        <button className="absolute z-50 right-14 bottom-0" onClick={closeMenu}>
+        <ButtonIcon
+          className="absolute z-50 right-14 bottom-0"
+          onClick={closeMenu}
+        >
           <FaXmark className="w-10 h-10" />
-        </button>
+        </ButtonIcon>
 
         <div className="absolute z-50 left-14 -bottom-2">
           <ToggleTheme className="w-10 h-10" />
@@ -20,16 +24,24 @@ function Menu() {
       <div className="absolute left-1/2 top-[8.5rem] -translate-x-1/2">
         <ul className="px-10 text-3xl flex flex-col gap-24 items-center justify-center h-full">
           <li className="text-hover ">
-            <Link href="/">Home</Link>
+            <Button onClick={closeMenu} href="/">
+              Home
+            </Button>
           </li>
           <li className="text-hover">
-            <Link href="/about">Sobre</Link>
+            <Button onClick={closeMenu} href="/about">
+              Sobre
+            </Button>
           </li>
           <li className="text-hover">
-            <Link href="/projects">Projetos</Link>
+            <Button onClick={closeMenu} href="/projects">
+              Projetos
+            </Button>
           </li>
           <li className="text-hover">
-            <Link href="/contact">Contato</Link>
+            <Button onClick={closeMenu} href="/contact">
+              Contato
+            </Button>
           </li>
         </ul>
       </div>

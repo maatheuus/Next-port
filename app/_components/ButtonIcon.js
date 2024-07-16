@@ -1,24 +1,27 @@
 import Link from "next/link";
+import { twMerge } from "tailwind-merge";
 
 function ButtonIcon({ href, variation, className, children, ...props }) {
-  const base =
-    "flex items-center gap-x-4 text-gray-primary text-sm hover:text-primary transition-colors duration-200";
+  const base = "flex items-center gap-x-4";
 
   const styles = {
     primary: base,
-    secondary:
-      "text-stone-600 gap-4 bg-transparent border border-gray-primary/40 hover:border-gray-primary/80 font-medium rounded-md text-md px-5 py-2.5 flex items-center",
+    secondary: base + "",
   };
 
   if (href)
     return (
-      <Link href={href} className={className} {...props}>
+      <Link
+        href={href}
+        className={twMerge(styles[variation], className)}
+        {...props}
+      >
         {children}
       </Link>
     );
 
   return (
-    <button className={className} {...props}>
+    <button className={twMerge(styles[variation], className)} {...props}>
       {children}
     </button>
   );

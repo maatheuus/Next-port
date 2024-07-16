@@ -1,13 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { FaBarsStaggered, FaXmark } from "react-icons/fa6";
+import { FaBarsStaggered } from "react-icons/fa6";
 import { useOpenMenu } from "@/app/_context/MenuContext";
 
-import Navigation from "@/app/_components/Navigation";
 import Menu from "@/app/_components/Menu";
-import ToggleTheme from "./ToggleTheme";
-import { twMerge } from "tailwind-merge";
+import Navigation from "@/app/_components/Navigation";
+import ButtonIcon from "@/app/_components/ButtonIcon";
 
 function Header() {
   const { menuIsOpen, openMenu } = useOpenMenu();
@@ -27,12 +26,12 @@ function Header() {
 
         <div className="md:hidden block relative h-10 w-auto">
           {!menuIsOpen && (
-            <button
-              onClick={openMenu}
+            <ButtonIcon
               className="absolute right-2 bottom-1 z-50"
+              onClick={openMenu}
             >
               <FaBarsStaggered className="w-10 h-8" />
-            </button>
+            </ButtonIcon>
           )}
         </div>
 

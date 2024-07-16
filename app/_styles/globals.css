@@ -19,7 +19,7 @@
   --svg-fill: 245, 245, 245;
   --btn-bg: 245, 245, 245;
 
-  --btn-color: 245, 245, 244;
+  --btn-color: 28, 25, 23;
   --primary-white: 28, 25, 23;
   --primary-gray: 214, 211, 209;
 
@@ -34,7 +34,7 @@
   --svg-fill: 28, 25, 23;
   --btn-bg: 28, 25, 23;
 
-  --btn-color: 28, 25, 23;
+  --btn-color: 245, 245, 244;
   --primary-white: 245, 245, 244;
   --primary-gray: 162, 165, 165;
 
@@ -149,11 +149,13 @@
   @keyframes fadeTopToBottom {
     0% {
       opacity: 0;
+      visibility: hidden;
       transform: translateY(-80%);
     }
 
     100% {
       opacity: 1;
+      visibility: visible;
       transform: translateY(0%);
     }
   }

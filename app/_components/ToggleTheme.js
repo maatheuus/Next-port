@@ -5,6 +5,7 @@ import { useTheme } from "next-themes";
 import { FaMoon, FaSun } from "react-icons/fa";
 import Image from "next/image";
 import { twMerge } from "tailwind-merge";
+import ButtonIcon from "@/app/_components/ButtonIcon";
 
 function ToggleTheme({ className }) {
   const [mounted, setMounted] = useState(false);
@@ -35,7 +36,7 @@ function ToggleTheme({ className }) {
 
   return (
     <div className="inline-flex items-center relative cursor-pointer">
-      <button
+      <ButtonIcon
         onClick={toggleTheme}
         className="w-12 h-12 flex items-center justify-center rounded-full hover:bg-stone-900 dark:hover:bg-stone-50 transition-all duration-200 group"
       >
@@ -49,12 +50,12 @@ function ToggleTheme({ className }) {
         ) : (
           <FaMoon
             className={twMerge(
-              "fill-stone-900 w-8 h-6 group-hover:fill-stone-50",
+              "fill-stone-900 group-hover:fill-stone-50 w-8 h-6",
               className
             )}
           />
         )}
-      </button>
+      </ButtonIcon>
     </div>
   );
 }
