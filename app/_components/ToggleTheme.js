@@ -1,32 +1,60 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
 import { FaMoon, FaSun } from "react-icons/fa";
-import ThemeSwitcher from "@/app/_context/ToggleThemeContext";
+import Image from "next/image";
+import { twMerge } from "tailwind-merge";
 
-function ToggleTheme() {
-  // const { setTheme, theme } = useToggleTheme();
-  const [dark, setDark] = useState(false);
+function ToggleTheme({ className }) {
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return (
+      <Image
+        src="data:image/svg+xml;base64,PHN2ZyBzdHJva2U9IiNGRkZGRkYiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMCIgdmlld0JveD0iMCAwIDI0IDI0IiBoZWlnaHQ9IjIwMHB4IiB3aWR0aD0iMjAwcHgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiB4PSIyIiB5PSIyIiBmaWxsPSJub25lIiBzdHJva2Utd2lkdGg9IjIiIHJ4PSIyIj48L3JlY3Q+PC9zdmc+Cg=="
+        width={36}
+        height={36}
+        sizes="36x36"
+        alt="Loading Light/Dark Toggle"
+        priority={false}
+        title="Loading Light/Dark Toggle"
+      />
+    );
+  }
 
   function toggleTheme() {
-    setDark(!dark);
-    // setTheme(dark ? "light" : "dark");
-    // console.log(theme);
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
   }
-  // console.log(dark);
 
   return (
-    <div className="inline-flex items-center relative cursor-pointer p-1">
-      {/* <button onClick={toggleTheme}>
-        {dark ? (
+    <div className="inline-flex items-center relative cursor-pointer">
+      <button
+        onClick={toggleTheme}
+        className="w-12 h-12 flex items-center justify-center rounded-full hover:bg-stone-900 dark:hover:bg-stone-50 transition-all duration-200 group"
+      >
+        {theme === "dark" ? (
           <FaSun
-            id="Layer_1"
-            className="fill-stone-950 opacity-90 peer-checked:opacity-0 w-5 h-5"
+            className={twMerge(
+              "fill-stone-100 group-hover:fill-stone-900 w-8 h-6",
+              className
+            )}
           />
         ) : (
-          <FaMoon id="Layer_2" className=" fill-stone-950 w-5 h-5 " />
+          <FaMoon
+            className={twMerge(
+              "fill-stone-900 w-8 h-6 group-hover:fill-stone-50",
+              className
+            )}
+          />
         )}
-      </button> */}
+      </button>
     </div>
   );
 }

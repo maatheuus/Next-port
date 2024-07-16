@@ -2,18 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Main Config */
 @layer utilities {
   html {
     font-size: 62.5%;
   }
-  body {
-    @apply bg-stone-100;
-  }
+
   .text-hover {
-    @apply hover:text-hoverColor transition-all hover:duration-100 hover:-translate-y-1;
+    @apply hover:text-hoverColor transition-all hover:duration-150;
   }
 }
 
+/* Dark and Light mode*/
+.dark body {
+  --background: 28, 25, 23;
+  --svg-fill: 245, 245, 245;
+  --btn-bg: 245, 245, 245;
+
+  --btn-color: 245, 245, 244;
+  --primary-white: 28, 25, 23;
+  --primary-gray: 214, 211, 209;
+
+  --text-layout: 168, 162, 158;
+
+  background: rgb(var(--background));
+}
+
+.light body {
+  --background: 245, 245, 244;
+
+  --svg-fill: 28, 25, 23;
+  --btn-bg: 28, 25, 23;
+
+  --btn-color: 28, 25, 23;
+  --primary-white: 245, 245, 244;
+  --primary-gray: 162, 165, 165;
+
+  --text-layout: 87, 83, 78;
+
+  background: rgb(var(--background));
+}
+
+/* Animation for projects */
 @layer utilities {
   .image-hover {
     @apply relative cursor-pointer object-cover h-[400px] overflow-hidden
@@ -79,7 +109,13 @@
   }
 }
 
+/* Geral classes */
 @layer components {
+  .strong > strong {
+    text-transform: uppercase;
+    text-decoration: underline;
+  }
+
   .spinner {
     margin: 3.2rem auto 1.6rem;
     width: 60px;
@@ -102,6 +138,24 @@
     animation-name: fadeLeft;
     animation-duration: 0.5s;
     animation-fill-mode: both;
+  }
+
+  .fadeTopToBottom {
+    animation-name: fadeTopToBottom;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+  }
+
+  @keyframes fadeTopToBottom {
+    0% {
+      opacity: 0;
+      transform: translateY(-80%);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
   }
 
   @keyframes fadeLeft {

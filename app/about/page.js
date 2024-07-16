@@ -15,7 +15,7 @@ function Page() {
         <div className="grid grid-cols-1 gap-10 ">
           <div className="text-2xl w-full gap-4">
             <h1 className="text-5xl font-bold mb-4">Sobre mim.</h1>
-            <p className="hyphens-auto mb-2">
+            <p className="hyphens-auto mb-2 strong">
               E aí! Sou um entusiasta de tecnologia viciado em programação, hoje
               eu sou um desenvolvedor <strong>Full-Stack</strong> e apaixonado
               por basquete, músicas e fotografia por hobby. Mesmo sem ter
@@ -31,7 +31,7 @@ function Page() {
               voltado para
               <strong> resultados de alta performance.</strong>
             </p>
-            <p className="hyphens-auto">
+            <p className="hyphens-auto strong">
               Com as <strong> experiências</strong> que eu possuo de empregos
               passados, tenho um senso de <strong> organização</strong> e
               urgência muito bom, sei que é uma característica essencial para

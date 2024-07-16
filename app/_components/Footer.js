@@ -11,7 +11,7 @@ function Footer({ label, to }) {
           <ActiveLink href={to}>
             <p className="text-xl hover:underline">
               {label}
-              <FaArrowRight className="inline w-6 h-6 forward text-stone-900" />
+              <FaArrowRight className="inline w-6 h-6 forward text-svg-fill" />
             </p>
           </ActiveLink>
         </div>
@@ -20,19 +20,19 @@ function Footer({ label, to }) {
           <ul className="list-none flex items-center gap-8">
             <li>
               <ButtonIcon href="mailto:matts14smkd@gmail.com">
-                <FaEnvelope className="text-stone-900 w-6 h-6" />
+                <FaEnvelope className="text-svg-fill w-6 h-6" />
               </ButtonIcon>
             </li>
 
             <li>
               <ButtonIcon href="https://www.linkedin.com/in/matheusmaat/">
-                <FaLinkedin className="text-stone-900 w-6 h-6" />
+                <FaLinkedin className="text-svg-fill w-6 h-6" />
               </ButtonIcon>
             </li>
 
             <li>
               <ButtonIcon href="https://github.com/maatheuus">
-                <FaGithub className="text-stone-900 w-6 h-6" />
+                <FaGithub className="text-svg-fill w-6 h-6" />
               </ButtonIcon>
             </li>
           </ul>

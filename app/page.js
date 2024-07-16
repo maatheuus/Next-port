@@ -7,9 +7,9 @@ function Page() {
         <div className="min-w-[40%] mx-auto">
           <article className="mt-24 flex flex-col">
             <div className="w-3/4">
-              <h1 className="text-7xl uppercase ">
-                <span className="block">Hey, Eu sou o </span>
-                <span>Matheus.</span>
+              <h1 className="text-7xl uppercase">
+                <span className="">Hey, Eu sou o </span>
+                <span>Matheus!</span>
               </h1>
               <p className="text-2xl py-4">
                 Seu amigo desenvolvedor{" "}

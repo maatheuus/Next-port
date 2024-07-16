@@ -1,4 +1,5 @@
 import { ActiveLink } from "./ActiveLink";
+import ToggleTheme from "./ToggleTheme";
 
 function Navigation() {
   return (
@@ -12,6 +13,9 @@ function Navigation() {
         </li>
         <li className="text-hover">
           <ActiveLink href="/contact">Contato</ActiveLink>
+        </li>
+        <li>
+          <ToggleTheme />
         </li>
       </ul>
     </nav>

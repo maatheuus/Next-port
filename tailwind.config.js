@@ -1,3 +1,5 @@
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -8,6 +10,15 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      colors: {
+        background: "rgb(var(--background))",
+        "btn-bg": "rgb(var(--btn-bg))",
+        "svg-fill": "rgb(var(--svg-fill))",
+        "btn-color": "rgb(var(--btn-color))",
+        "primary-white": "rgb(var(--primary-white))",
+        "primary-gray": "rgb(var(--primary-gray))",
+        "text-layout": "rgb(var(--text-layout))",
+      },
       textColor: {
         hoverColor: "#a1ce5f",
       },
@@ -25,5 +36,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [new MiniCssExtractPlugin()],
 };

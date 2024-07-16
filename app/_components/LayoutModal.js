@@ -10,15 +10,18 @@ function LayoutModal({ project, onClick }) {
 
   return (
     <LayoutPage className="max-h-full overflow-x-auto px-9 py-7 flex flex-col gap-6">
-      <div className="border-b flex items-start justify-between pb-4">
-        <button onClick={onClick}>
-          <RiArrowLeftCircleLine className="text-stone-200 w-10 h-10" />
+      <div className="border-b pb-4">
+        <button
+          onClick={onClick}
+          className="flex items-center justify-between pb-4 w-full"
+        >
+          <RiArrowLeftCircleLine className="text-svg-fill w-10 h-10" />
+          <p className="text-2xl text-btn-color">Go Back</p>
         </button>
-        <h1 className="text-2xl">Go Back</h1>
       </div>
       <div>
-        <h2 className="text-4xl">{title}</h2>
-        <p className="text-stone-400 text-xl">{description}</p>
+        <h1 className="text-4xl">{title}</h1>
+        <p className="text-text-layout text-xl">{description}</p>
       </div>
       <div>
         <Image
@@ -32,7 +35,7 @@ function LayoutModal({ project, onClick }) {
 
       <div>
         <h3>Sobre</h3>
-        <p className="text-stone-300 text-xl">{about}</p>
+        <p className="text-text-layout text-xl">{about}</p>
       </div>
 
       <div>
@@ -41,7 +44,7 @@ function LayoutModal({ project, onClick }) {
           {technologies.map((tech, i) => (
             <p
               key={i}
-              className="text-lg bg-gray-500/60 rounded-xl px-8 py-1 capitalize text-stone-50"
+              className="text-lg bg-gray-600 text-stone-200 rounded-xl px-8 py-1 capitalize dark:text-stone-50 dark:bg-gray-500/60"
             >
               {tech}
             </p>
@@ -52,8 +55,10 @@ function LayoutModal({ project, onClick }) {
       <div>
         <div className="mb-7">
           <div className="flex text-3xl gap-x-3">
-            <BiWorld className="text-white" />
-            <h3 className="uppercase">Website</h3>
+            <BiWorld className="text-svg-fill" />
+            <Link href={link} target="_black">
+              <h3 className="uppercase">Website</h3>
+            </Link>
           </div>
           <Link
             href={link}
@@ -65,8 +70,10 @@ function LayoutModal({ project, onClick }) {
         </div>
         <div>
           <div className="flex text-3xl gap-x-3">
-            <RiGithubFill className="text-white" />
-            <h3 className="uppercase">Github</h3>
+            <RiGithubFill className="text-svg-fill" />
+            <Link href={github} target="_black">
+              <h3 className="uppercase">Github</h3>
+            </Link>
           </div>
           <Link
             href={github}
@@ -87,7 +94,7 @@ const LayoutPage = styled.div`
   h1,
   h2,
   h3 {
-    color: #fff;
+    /* color: #fff; */
     margin-bottom: 8px;
   }
 

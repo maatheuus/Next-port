@@ -3,7 +3,7 @@ import { Baloo_2 } from "next/font/google";
 import "@/app/_styles/globals.css";
 import Header from "@/app/_components/Header";
 import Providers from "@/app/Providers";
-import ThemeSwitcher from "./_context/ToggleThemeContext";
+import { twMerge } from "tailwind-merge";
 
 const baloo = Baloo_2({
   subsets: ["latin"],
@@ -21,19 +21,18 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${baloo.className} bg-stone-100`}>
-        <div id="modal"></div>
-        <Header />
-        <div className="w-full">
-          <main className="max-w-[1320px] mx-auto py-8 px-12 md:w-full">
-            <Providers>
-              <ThemeSwitcher />
+    <html lang="en" className="h-svh">
+      <Providers>
+        <body className={twMerge(baloo.className, "")}>
+          <div id="modal"></div>
+          <Header />
+          <div className="w-full">
+            <main className="max-w-[1320px] mx-auto py-8 px-12 md:w-full">
               {children}
-            </Providers>
-          </main>
-        </div>
-      </body>
+            </main>
+          </div>
+        </body>
+      </Providers>
     </html>
   );
 }

@@ -4,7 +4,7 @@ import(twMerge);
 
 function Input({ type, classInput, ...props }) {
   const base =
-    "pl-4 py-3 rounded-md border border-gray-200 outline-none text-stone-600 text-2xl shadow-sm";
+    "pl-4 py-3 rounded-md border border-gray-200 outline-none text-2xl shadow-sm text-stone-600 dark:text-stone-900";
 
   const className = {
     text: base + "h-16 mb-6",

@@ -11,7 +11,7 @@ function Page() {
       <div className="w-full min-[355px]:w-4/5 flex flex-col gap-6 mr-auto p-4 sm:p-10 sm:mx-auto">
         <h1 className="text-5xl font-bold">Contato.</h1>
         <div>
-          <p className="text-base min-[370px]:text-xl text-stone-600">
+          <p className="text-base min-[370px]:text-xl text-primary-gray">
             Mande uma mensagem por aqui ou diretamente{" "}
             <b> matts14smkd@gmail.com</b>.
           </p>
@@ -20,7 +20,7 @@ function Page() {
           <form
             action="https://formsubmit.co/matts14smkd@gmail.com"
             method="POST"
-            className="flex flex-col  justify-end h-full md:justify-start"
+            className="flex flex-col justify-end h-full md:justify-start"
           >
             <Input
               name="name"
@@ -45,7 +45,7 @@ function Page() {
             />
             <div className="mt-4">
               <button
-                className="bg-stone-800 text-stone-100 text-xl px-6 py-3 w-36 transition-all duration-300 hover:bg-stone-950"
+                className="bg-btn-bg text-btn-color text-xl px-6 py-3 w-36"
                 type="submit"
               >
                 Enviar

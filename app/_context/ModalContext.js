@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, use, useState } from "react";
+import { createContext, use, useEffect, useRef, useState } from "react";
 
 const ModalContext = createContext({
   projectIsOpen: Boolean,
@@ -29,4 +29,20 @@ function useOpenModal() {
   return context;
 }
 
-export { ModalProvider, useOpenModal };
+function useClickOutside(close) {
+  const ref = useRef();
+
+  useEffect(() => {
+    function handleClick(e) {
+      if (ref.current && !ref.current.contains(e.target)) close();
+    }
+
+    document.addEventListener("click", handleClick);
+
+    return () => document.removeEventListener("click", handleClick);
+  }, [close]);
+
+  return ref;
+}
+
+export { ModalProvider, useOpenModal, useClickOutside };

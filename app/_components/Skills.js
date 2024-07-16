@@ -24,7 +24,10 @@ function Skills() {
   ];
   return (
     <div>
-      <ul className="flex flex-wrap items-center justify-center gap-10 mt-10 [&_img]:max-w-12">
+      <ul
+        className="flex flex-wrap items-center justify-center gap-10 mt-10 [&_img]:max-w-12 
+      bg-white py-6"
+      >
         {logos.map((logo, index) => (
           <li key={index}>
             <Image src={logo.src} alt={logo.alt} />
