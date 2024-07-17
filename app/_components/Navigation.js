@@ -4,7 +4,7 @@ import ToggleTheme from "./ToggleTheme";
 function Navigation() {
   return (
     <nav className="z-10">
-      <ul className="flex gap-5 items-center">
+      <ul className="flex gap-5 items-center text-medium">
         <li className="text-hover">
           <ActiveLink href="/about">Sobre</ActiveLink>
         </li>

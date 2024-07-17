@@ -43,14 +43,14 @@ function ToggleTheme({ className }) {
         {theme === "dark" ? (
           <FaSun
             className={twMerge(
-              "fill-stone-100 group-hover:fill-stone-900 w-8 h-6",
+              "fill-svg-fil group-hover:fill-stone-900 w-8 h-6",
               className
             )}
           />
         ) : (
           <FaMoon
             className={twMerge(
-              "fill-stone-900 group-hover:fill-stone-50 w-8 h-6",
+              "fill-svg-fill group-hover:fill-stone-50 w-8 h-6",
               className
             )}
           />

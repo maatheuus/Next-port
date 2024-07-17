@@ -76,17 +76,42 @@ export const projects = [
     technologies: ["javaScript", "html", "css"],
   },
 ];
-/**
- *   // {
-  //   id: 4,
-  //   invertImage: false,
-  //   numberProject: "04",
-  //   title: "ReactFood",
-  //   about:
-  //     "ReactFood é um site aonde você pode escolher dentre diversas opções de comidas com um layout amigável e um formulário para inserir seus dados e fazer o pedido. Para mais detalhes de como iniciar, veja no github.",
-  //   image: foodApp,
-  //   existLiveDemo: false,
-  //   github: "https://github.com/maatheuus/ReactFood",
-  //   technologies: ["FaReact", "FaNodeJs"],
-  // },
- */
+
+export const COURSES_DATA = [
+  {
+    id: 1,
+    title: "Backend.",
+    location: "Udemy",
+    link: "https://www.udemy.com/course/nodejs-express-mongodb-bootcamp",
+    date: "2023",
+    description:
+      "Um bootcamp completo de backend com NodeJS, Express e MongoDB. Construção de API RESTful, autenticações, seguranças com Node.js, profundo conhecimento em moongose e mais.",
+  },
+  {
+    id: 2,
+    title: "Frontend (JavaScript).",
+    location: "Udemy",
+    link: "https://www.udemy.com/course/the-complete-javascript-course/",
+    date: "2022",
+    description:
+      "Muitos desenvolvedores enfrentam dificuldade em JavaScript com cursos que não ensinam bem ou não ensinam o suficiente na faculdade. Principalmente com lógica dentro do JavaScript, a  famigerada POO (Programação Orientada a Objetos), moderno ES6+ e etc...",
+  },
+  {
+    id: 3,
+    title: "Frontend (Bibliotecas e Frameworks).",
+    location: "Udemy",
+    link: "https://www.udemy.com/course/the-ultimate-react-course/",
+    date: "2024",
+    description:
+      "Curso completo de tudo o que eu preciso saber sobre React.js, Next.js e Redux para fazer os sites mais lindos e com as melhores práticas de código atualmente. Como bônus o curs também vem com mini-cursos de estilização, tais como: Tailwind CSS, CSS Modules, Styled Components (CSS-in-JS).",
+  },
+  {
+    id: 4,
+    title: "Estrutura de dados e algoritmo.",
+    location: "Udemy",
+    link: "https://www.udemy.com/course/the-ultimate-react-course/",
+    date: "2023",
+    description:
+      "Muitos desenvolvedores que são &quot;autodidatas&quot; sentem que uma das principais desvantagens que enfrentam em comparação com graduados universitários em ciência da computação é o fato de não terem conhecimento sobre algoritmos, estruturas de dados e notação Big-O.",
+  },
+];

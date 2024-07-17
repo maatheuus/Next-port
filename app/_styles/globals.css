@@ -113,7 +113,6 @@
 @layer components {
   .strong > strong {
     text-transform: uppercase;
-    text-decoration: underline;
   }
 
   .spinner {

@@ -10,6 +10,7 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      fontSize: { medium: "1.6rem" },
       colors: {
         background: "rgb(var(--background))",
         "btn-bg": "rgb(var(--btn-bg))",

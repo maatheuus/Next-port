@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 import { twMerge } from "tailwind-merge";
 
 function Button({ href, close, variation, className, children, ...props }) {
