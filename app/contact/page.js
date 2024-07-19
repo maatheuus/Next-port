@@ -16,7 +16,7 @@ function Page() {
             <b> matts14smkd@gmail.com</b>.
           </p>
         </div>
-        <div>
+        <div className="w-[50rem]">
           <form
             action="https://formsubmit.co/matts14smkd@gmail.com"
             method="POST"
