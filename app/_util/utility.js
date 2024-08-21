@@ -3,6 +3,7 @@ import weather from "@/public/weather.png";
 import fastPizza from "@/public/react-fast-pizza.png";
 import vacationPlans from "@/public/vactions-plan.png";
 import bookLife from "@/public/book-life-2.png";
+import movieLife from "@/public/movie-life.png";
 
 export const projects = [
   {
@@ -64,6 +65,27 @@ export const projects = [
   },
   {
     id: 5,
+    title: "Movie Life",
+    classImg: "!h-[361px]",
+    description:
+      "Movie Life é uma plataforma para explorar e favoritar filmes e séries, com uma interface simples e intuitiva.",
+    about:
+      "O Movie Life é uma aplicação moderna que permite aos usuários explorar uma vasta coleção de filmes e séries. Com uma interface intuitiva, você pode buscar e favoritar seus títulos preferidos, além de gerenciar sua própria lista de conteúdos. Utilizando tecnologia de ponta, como MongoDB e React Query, o Movie Life proporciona uma experiência de usuário fluida e personalizada, ideal para os amantes de cinema e televisão.",
+    image: movieLife,
+    link: "https://movie-life-ml.vercel.app",
+    github: "https://github.com/maatheuus/Movie-Life",
+    technologies: [
+      "react & react query",
+      "redux",
+      "javascript",
+      "mongoDB",
+      "express",
+      "nodeJs",
+      "tailwind",
+    ],
+  },
+  {
+    id: 6,
     title: "Weather App",
     classImg: " !h-[318px]",
     description:
