@@ -1,8 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
-import { ThemeProvider } from "next-themes";
 import { ModalProvider } from "@/app/_context/ModalContext";
 import { MenuProvider } from "@/app/_context/MenuContext";
+import { ThemeProvider } from "./theme-provider";
 
 function Providers({ children }) {
   const [mounted, setMounted] = useState(false);
@@ -12,7 +12,7 @@ function Providers({ children }) {
   if (!mounted) return <ModalProvider>{children}</ModalProvider>;
 
   return (
-    <ThemeProvider attribute="class" defaultTheme="system">
+    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
       <MenuProvider>
         <ModalProvider>{children}</ModalProvider>
       </MenuProvider>

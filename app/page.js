@@ -11,7 +11,7 @@ function Page() {
             <article className="mt-24 flex flex-col ">
               <div className="w-3/4 mx-auto">
                 <h1 className="text-7xl uppercase">
-                  <span className="">Hey, Eu sou o </span>
+                  <span>Hey, Eu sou o </span>
                   <span>Matheus!</span>
                 </h1>
                 <p className="text-medium py-4">

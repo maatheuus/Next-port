@@ -2,7 +2,7 @@ import { Baloo_2 } from "next/font/google";
 
 import "@/app/_styles/globals.css";
 import Header from "@/app/_components/Header";
-import Providers from "@/app/Providers";
+import Providers from "@/app/providers";
 import { twMerge } from "tailwind-merge";
 import { ViewTransitions } from "next-view-transitions";
 
@@ -23,9 +23,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <ViewTransitions>
-      <html lang="en" className="h-svh">
-        <Providers>
-          <body className={twMerge(baloo.className, "p-0 sm:p-12")}>
+      <html lang="pt-BR" className="h-svh" suppressHydrationWarning>
+        <body className={twMerge(baloo.className, "p-0 sm:p-12")}>
+          <Providers>
             <div id="modal"></div>
             <Header />
             <div className="w-full">
@@ -33,8 +33,8 @@ export default function RootLayout({ children }) {
                 {children}
               </main>
             </div>
-          </body>
-        </Providers>
+          </Providers>
+        </body>
       </html>
     </ViewTransitions>
   );
