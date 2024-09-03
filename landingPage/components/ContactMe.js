@@ -57,7 +57,7 @@ function ContactMe() {
       whileInView="visible"
       transition={{ staggerChildren: 0.04 }}
       style={{ scale }}
-      className="mt-10"
+      className="mt-12 h-svh"
     >
       <motion.div
         transition={transition}
@@ -74,8 +74,8 @@ function ContactMe() {
         <div style={{ maxWidth: "60%" }}>
           <Form {...form}>
             <form
-              //   action="https://formsubmit.co/matts14smkd@gmail.com"
-              //   method="POST"
+              action="https://formsubmit.co/matts14smkd@gmail.com"
+              method="POST"
               onSubmit={form.handleSubmit(onSubmit)}
               className="text-xl space-y-2"
             >

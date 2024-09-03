@@ -13,11 +13,11 @@ function AboutMe() {
 
   return (
     <motion.section
-      id="about"
       initial="hidden"
       whileInView="visible"
+      className="h-screen lg:h-fit"
       transition={{ staggerChildren: 0.04 }}
-      style={{ scale, height: "fit-content" }}
+      style={{ scale }}
     >
       <motion.div
         style={{ scaleY: scrollYProgress }}

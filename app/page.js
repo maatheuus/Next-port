@@ -9,7 +9,7 @@ function Page() {
   return (
     <>
       <Introduction />
-      <div className="grid" style={{ gridTemplateColumns: "repeat(2, 1fr)" }}>
+      <div className="grid grid-cols-1 lg:grid-cols-2">
         <AboutMe />
         <MyProjects />
       </div>

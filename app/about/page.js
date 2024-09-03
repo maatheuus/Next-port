@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import Courses from "@/components/Courses";
+import Heading from "@/landingPage/components/Heading";
 
 export const metadata = {
   title: "About Me",
@@ -8,10 +9,10 @@ export const metadata = {
 function Page() {
   return (
     <section className="h-full mt-10 min-w-[40%]">
-      <div className="grid grid-cols-1 gap-10 w-3/4 mx-0 md:mx-auto">
+      <div className="grid grid-cols-1 gap-10 lg:w-3/4 mx-0 md:mx-auto">
         <div className="text-2xl w-full gap-4">
-          <h1 className="text-5xl font-bold mb-4">Sobre mim.</h1>
-          <p className="hyphens-auto text-medium mb-2 strong">
+          <Heading label="Sobre mim." />
+          <p className="hyphens-auto text-base mb-2 strong">
             Olá! Sou um entusiasta de tecnologia viciado em programação, hoje eu
             sou um desenvolvedor <strong>Full-Stack</strong>. Mesmo sem ter
             conseguido meu primeiro emprego na área ainda, estou sempre buscando
@@ -24,7 +25,7 @@ function Page() {
             mais analítica, um pensamento estratégico e um trabalho voltado para
             <strong> resultados de alta performance.</strong>
           </p>
-          <p className="hyphens-auto text-medium strong">
+          <p className="hyphens-auto text-base strong">
             Com as <strong> experiências</strong> que eu possuo de empregos
             passados, tenho um senso de <strong> organização</strong> e urgência
             muito bom, sei que é uma característica essencial para manter um

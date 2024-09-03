@@ -7,6 +7,8 @@ import { useOpenModal } from "@/context/ModalContext";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { SquareArrowOutUpRight } from "lucide-react";
 import { Suspense, useState } from "react";
+import { AnimatePresence } from "framer-motion";
+import Heading from "./Heading";
 
 const container = {
   hidden: { opacity: 1, scale: 0 },
@@ -14,22 +16,16 @@ const container = {
     opacity: 1,
     scale: 1,
     transition: {
-      delayChildren: 0.3,
-      staggerChildren: 0.2,
+      delayChildren: 0.6,
+      staggerChildren: 0.4,
     },
   },
 };
 
 const item = {
   hidden: { x: 20, opacity: 0 },
-  visible: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      delayChildren: 0.5,
-      staggerChildren: 0.2,
-    },
-  },
+  visible: { x: 0, opacity: 1, transition: { duration: 1 } },
+  exit: { x: -20, opacity: 0 }, // Adiciona animação de saída
 };
 
 function MyProjects() {
@@ -42,20 +38,23 @@ function MyProjects() {
   const firstTwoProjects = projects.filter(
     (project) => project.id === 1 || project.id === 5
   );
+
   return (
     <motion.section
+      className="h-screen col-span-1 mb-10"
       initial="hidden"
       whileInView="visible"
       transition={{ staggerChildren: 0.04 }}
-      className="h-screen col-span-1"
+      // style={{ scale }}
     >
-      {/* <Heading label="Projetos." /> */}
+      <Heading label="Projetos." className="block md:hidden" />
       <motion.div className="flex flex-col justify-center mt-10">
         <Suspense fallback={<Spinner />}>
           <motion.ul
             variants={container}
             initial="hidden"
             animate="visible"
+            exit="hidden"
             className="grid list-none overflow-hidden"
             // style={{ gridTemplateColumns: "repeat(2, 1fr)" }}
           >
@@ -64,7 +63,6 @@ function MyProjects() {
                 <motion.li key={project.id} variants={item}>
                   <button
                     className="px-6"
-                    // style={{ maxWidth: "50%" }}
                     onClick={() => {
                       openProject();
                       setIdProject(project.id);
