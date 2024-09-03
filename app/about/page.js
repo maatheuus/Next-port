@@ -1,5 +1,5 @@
-import Footer from "@/app/_components/Footer";
-import Courses from "@/app/_components/Courses";
+import Footer from "@/components/Footer";
+import Courses from "@/components/Courses";
 
 export const metadata = {
   title: "About Me",

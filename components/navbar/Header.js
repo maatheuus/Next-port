@@ -1,25 +1,18 @@
 "use client";
 
-import { Link } from "next-view-transitions";
 import { FaBarsStaggered } from "react-icons/fa6";
-import { useOpenMenu } from "@/app/_context/MenuContext";
+import { useOpenMenu } from "@/context/MenuContext";
 
-import Menu from "@/app/_components/Menu";
-import Navigation from "@/app/_components/Navigation";
-import ButtonIcon from "@/app/_components/ButtonIcon";
+import Menu from "./Menu";
+import Navigation from "./Navigation";
+import ButtonIcon from "./ButtonIcon";
 
 function Header() {
   const { menuIsOpen, openMenu } = useOpenMenu();
 
-  const nameHeader = "<Matheus />";
-
   return (
     <header className="py-10 text-2xl">
       <div className="px-10 flex flex-wrap justify-between items-center max-w-[1320px] mx-auto">
-        <h1 className="text-3xl">
-          <Link href="/">{nameHeader}</Link>
-        </h1>
-
         <div className="md:inline hidden">
           <Navigation />
         </div>

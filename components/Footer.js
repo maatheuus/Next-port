@@ -1,6 +1,6 @@
 import { FaEnvelope, FaLinkedin, FaGithub, FaArrowRight } from "react-icons/fa";
-import { ActiveLink } from "@/app/_components/ActiveLink";
-import ButtonIcon from "@/app/_components/ButtonIcon";
+import { ActiveLink } from "./ActiveLink";
+import ButtonIcon from "./ButtonIcon";
 
 function Footer({ label, to }) {
   return (
@@ -8,9 +8,9 @@ function Footer({ label, to }) {
       <br />
       <div>
         <ActiveLink href={to}>
-          <p className="text-2xl hover:underline">
+          <p className="text-lg hover:underline">
             {label}
-            <FaArrowRight className="inline w-6 h-6 forward text-svg-fill" />
+            <FaArrowRight className="inline w-4 h-4 forward text-svg-fill" />
           </p>
         </ActiveLink>
       </div>
@@ -19,7 +19,7 @@ function Footer({ label, to }) {
         <ul className="list-none flex items-center gap-8">
           <li>
             <ButtonIcon href="mailto:matts14smkd@gmail.com" target="_black">
-              <FaEnvelope className="text-svg-fill w-7 h-7" />
+              <FaEnvelope className="text-svg-fill w-5 h-5" />
             </ButtonIcon>
           </li>
 
@@ -28,13 +28,13 @@ function Footer({ label, to }) {
               href="https://www.linkedin.com/in/matheusmaat/"
               target="_black"
             >
-              <FaLinkedin className="text-svg-fill w-7 h-7" />
+              <FaLinkedin className="text-svg-fill w-5 h-5" />
             </ButtonIcon>
           </li>
 
           <li>
             <ButtonIcon href="https://github.com/maatheuus" target="_black">
-              <FaGithub className="text-svg-fill w-7 h-7" />
+              <FaGithub className="text-svg-fill w-5 h-5" />
             </ButtonIcon>
           </li>
         </ul>

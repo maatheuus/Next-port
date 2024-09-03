@@ -1,5 +1,5 @@
-import Input from "@/app/_components/Input";
-import Footer from "../_components/Footer";
+import Input from "@/components/Input";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "Contact",

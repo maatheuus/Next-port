@@ -1,15 +1,15 @@
 "use client";
-import { useEffect, useState } from "react";
-import { ModalProvider } from "@/app/_context/ModalContext";
-import { MenuProvider } from "@/app/_context/MenuContext";
+// import { useEffect, useState } from "react";
+import { ModalProvider } from "@/context/ModalContext";
+import { MenuProvider } from "@/context/MenuContext";
 import { ThemeProvider } from "./theme-provider";
 
 function Providers({ children }) {
-  const [mounted, setMounted] = useState(false);
+  // const [mounted, setMounted] = useState(false);
 
-  useEffect(() => setMounted(true), [mounted]);
+  // useEffect(() => setMounted(true), [mounted]);
 
-  if (!mounted) return <ModalProvider>{children}</ModalProvider>;
+  // if (!mounted) return <ModalProvider>{children}</ModalProvider>;
 
   return (
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>

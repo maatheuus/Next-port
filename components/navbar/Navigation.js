@@ -1,10 +1,9 @@
-import { ActiveLink } from "./ActiveLink";
-import ToggleTheme from "./ToggleTheme";
+import { ActiveLink } from "@/components/ActiveLink";
 
 function Navigation() {
   return (
-    <nav className="z-10">
-      <ul className="flex gap-5 items-center text-medium">
+    <div>
+      <ul className="flex gap-x-10 items-center text-lg">
         <li className="text-hover">
           <ActiveLink href="/about">Sobre</ActiveLink>
         </li>
@@ -14,11 +13,8 @@ function Navigation() {
         <li className="text-hover">
           <ActiveLink href="/contact">Contato</ActiveLink>
         </li>
-        <li>
-          <ToggleTheme />
-        </li>
       </ul>
-    </nav>
+    </div>
   );
 }
 

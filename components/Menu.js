@@ -1,8 +1,8 @@
 import { FaXmark } from "react-icons/fa6";
-import { useOpenMenu } from "@/app/_context/MenuContext";
-import ToggleTheme from "@/app/_components/ToggleTheme";
-import ButtonIcon from "@/app/_components/ButtonIcon";
-import Button from "@/app/_components/Button";
+import { useOpenMenu } from "@/context/MenuContext";
+import ToggleTheme from "./navbar/DarkMode";
+import ButtonIcon from "./ButtonIcon";
+import Button from "./Button";
 
 function Menu() {
   const { closeMenu } = useOpenMenu();
