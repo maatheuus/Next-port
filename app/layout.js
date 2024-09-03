@@ -1,7 +1,7 @@
 import { Baloo_2 } from "next/font/google";
 
 import "@/styles/globals.css";
-import Providers from "@/app/providers";
+import Providers from "@/app/Providers";
 import { Toaster } from "@/components/ui/toaster";
 import { ViewTransitions } from "next-view-transitions";
 import Navbar from "@/components/navbar/Navbar";
