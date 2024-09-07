@@ -1,49 +1,49 @@
-import { FaXmark } from "react-icons/fa6";
 import { useOpenMenu } from "@/context/MenuContext";
-import ToggleTheme from "./navbar/DarkMode";
-import ButtonIcon from "./ButtonIcon";
-import Button from "./Button";
+import { X } from "lucide-react";
+import { useEffect } from "react";
+import DarkMode from "./navbar/DarkMode";
+import { Button } from "./ui/button";
+import { Link } from "next-view-transitions";
+
+const listMenu = [
+  { label: "Home", href: "/" },
+  { label: "Sobre", href: "/about" },
+  { label: "Projetos", href: "/projects" },
+  { label: "Contato", href: "/contact" },
+];
 
 function Menu() {
-  const { closeMenu } = useOpenMenu();
-  return (
-    <menu className="fixed top-0 left-0 w-svw h-svh z-30 fadeTopToBottom transition-all bg-background ease-linear">
-      <div className="relative h-[8rem]">
-        <ButtonIcon
-          className="absolute z-50 right-14 bottom-0"
-          onClick={closeMenu}
-        >
-          <FaXmark className="w-10 h-10" />
-        </ButtonIcon>
+  const { menuIsOpen, closeMenu } = useOpenMenu();
 
-        <div className="absolute z-50 left-14 -bottom-2">
-          <ToggleTheme className="w-10 h-10" />
-        </div>
+  useEffect(() => {
+    if (menuIsOpen) {
+      document.body.style.overflow = "hidden";
+    }
+
+    return () => (document.body.style.overflow = "auto");
+  }, [menuIsOpen]);
+
+  return (
+    <menu className="fixed top-0 left-0 w-full h-full z-50 fadeTopToBottom transition-all bg-background">
+      <div className="absolute right-8 top-20">
+        <Button variant="icon" onClick={closeMenu}>
+          <X className="w-10 h-10" />
+        </Button>
+      </div>
+      <div className="w-full h-full">
+        <ul className="px-2 flex flex-col gap-y-16 items-center justify-center h-full">
+          {listMenu.map((item) => (
+            <li key={item.label} className="!text-hover">
+              <Button variant="ghost" className="text-lg" onClick={closeMenu}>
+                <Link href={item.href}>{item.label}</Link>
+              </Button>
+            </li>
+          ))}
+        </ul>
       </div>
 
-      <div className="absolute left-1/2 top-[8.5rem] -translate-x-1/2">
-        <ul className="px-10 text-3xl flex flex-col gap-24 items-center justify-center h-full">
-          <li className="text-hover ">
-            <Button onClick={closeMenu} href="/">
-              Home
-            </Button>
-          </li>
-          <li className="text-hover">
-            <Button onClick={closeMenu} href="/about">
-              Sobre
-            </Button>
-          </li>
-          <li className="text-hover">
-            <Button onClick={closeMenu} href="/projects">
-              Projetos
-            </Button>
-          </li>
-          <li className="text-hover">
-            <Button onClick={closeMenu} href="/contact">
-              Contato
-            </Button>
-          </li>
-        </ul>
+      <div className="absolute right-8 bottom-20">
+        <DarkMode className="w-10 h-10" />
       </div>
     </menu>
   );

@@ -21,16 +21,16 @@ function ProjectsDetails(props) {
           width={500}
           className="object-cover"
         />
-        <div className="content-hidden flex flex-col text-left gap-4">
+        <div className="content-hidden flex flex-col text-left gap-y-3">
           <h1 className="text-stone-50 text-2xl font-semibold">{title}</h1>
           <p className="text-stone-50 text-base font-600 hyphens-auto">
             {description}
           </p>
-          <div className="flex gap-3 flex-wrap">
+          <div className="hidden sm:flex gap-2 flex-wrap ">
             {technologies.map((tech, index) => (
               <p
                 key={index}
-                className="text-base bg-gray-500/60 rounded-3xl px-8 py-1 capitalize text-stone-50"
+                className="text-sm bg-gray-500/60 rounded-3xl px-5 py-1 capitalize text-stone-50"
               >
                 {tech}
               </p>

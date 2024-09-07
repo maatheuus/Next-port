@@ -28,7 +28,9 @@ export default function RootLayout({ children }) {
           <Providers>
             <div id="modal"></div>
             <Navbar />
-            <main className="container mx-auto py-8 px-12">{children}</main>
+            <main className="container mx-auto py-8 px-2 sm:px-12 ">
+              {children}
+            </main>
             <Toaster />
           </Providers>
         </body>

@@ -41,13 +41,13 @@ function MyProjects() {
 
   return (
     <motion.section
-      className="h-screen col-span-1 mb-10"
+      className="mb-10"
       initial="hidden"
       whileInView="visible"
       transition={{ staggerChildren: 0.04 }}
-      // style={{ scale }}
     >
-      <Heading label="Projetos." className="block md:hidden" />
+      <Heading label="Projetos." className="block md:hidden mb-6" />
+
       <motion.div className="flex flex-col justify-center mt-10">
         <Suspense fallback={<Spinner />}>
           <motion.ul
@@ -56,13 +56,11 @@ function MyProjects() {
             animate="visible"
             exit="hidden"
             className="grid list-none overflow-hidden"
-            // style={{ gridTemplateColumns: "repeat(2, 1fr)" }}
           >
             {firstTwoProjects.map((project) => {
               return (
                 <motion.li key={project.id} variants={item}>
                   <button
-                    className="px-6"
                     onClick={() => {
                       openProject();
                       setIdProject(project.id);
@@ -81,17 +79,17 @@ function MyProjects() {
             })}
           </motion.ul>
         </Suspense>
-      </motion.div>
 
+        <ActiveLink href="/projects">
+          <p className="text-lg flex gap-x-4 items-center hover:underline">
+            <span>Ver todos os projetos</span>
+            <SquareArrowOutUpRight className="w-4 h-4" />
+          </p>
+        </ActiveLink>
+      </motion.div>
       <Suspense fallback={<Spinner />}>
         <SideBar id={idProject} />
       </Suspense>
-      <ActiveLink href="/projects">
-        <p className="text-lg flex gap-x-4 items-center hover:underline">
-          <span>Ver todos os projetos</span>
-          <SquareArrowOutUpRight className="w-4 h-4" />
-        </p>
-      </ActiveLink>
     </motion.section>
   );
 }

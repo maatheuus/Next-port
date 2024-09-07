@@ -57,7 +57,7 @@ function ContactMe() {
       whileInView="visible"
       transition={{ staggerChildren: 0.04 }}
       style={{ scale }}
-      className="mt-12 h-svh"
+      className="mt-12 h-full"
     >
       <motion.div
         transition={transition}

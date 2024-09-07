@@ -3,6 +3,7 @@ import scrollIcon from "@/public/svg/scroll-black.gif";
 import { motion } from "framer-motion";
 import { Link } from "next-view-transitions";
 import Image from "next/image";
+import Heading from "./Heading";
 
 const transition = { duration: 1, ease: [0.25, 0.1, 0.25, 1] };
 const variants = {
@@ -12,7 +13,7 @@ const variants = {
 function Introduction() {
   return (
     <motion.section
-      className="flex items-center flex-col h-screen"
+      className="flex items-center flex-col p-4 h-svh"
       initial="hidden"
       whileInView="visible"
       transition={{ staggerChildren: 0.04 }}
@@ -23,13 +24,7 @@ function Introduction() {
         className="mt-24"
       >
         <div className="w-3/4 mx-auto">
-          <motion.h1
-            className="block text-5xl uppercase mb-7"
-            transition={transition}
-            variants={variants}
-          >
-            Hey, Eu sou o <span className="block">Matheus!</span>
-          </motion.h1>
+          <Heading label="Olá, eu sou o Matheus!" className="mb-3" />
           <motion.p
             transition={transition}
             variants={variants}
@@ -55,9 +50,9 @@ function Introduction() {
           <Footer label="Ver mais sobre mim" to="/about" />
         </div>
       </motion.article>
-      <div className="w-full mx-auto flex justify-center items-center">
+      {/* <div className="w-full mx-auto flex justify-center items-center">
         <Image width={35} height={35} src={scrollIcon} alt="Gif animated" />
-      </div>
+      </div> */}
     </motion.section>
   );
 }

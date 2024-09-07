@@ -1,5 +1,3 @@
-"use client";
-
 import { createContext, use, useState } from "react";
 
 const MenuContext = createContext({

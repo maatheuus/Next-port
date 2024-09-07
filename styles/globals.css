@@ -114,8 +114,10 @@
   }
 
   .fadeTopToBottom {
+    transition: ease-in-out;
     animation-name: fadeTopToBottom;
-    animation-duration: 2s;
+    animation-duration: 1s;
+    animation-delay: 0.4s;
     animation-fill-mode: both;
   }
 
@@ -123,13 +125,17 @@
     0% {
       opacity: 0;
       visibility: hidden;
-      transform: translateY(-80%);
+      transform: translateX(80%);
+    }
+
+    50% {
+      opacity: 1;
     }
 
     100% {
       opacity: 1;
       visibility: visible;
-      transform: translateY(0%);
+      transform: translateX(0%);
     }
   }
 
