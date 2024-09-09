@@ -13,10 +13,13 @@ const variants = {
 function Introduction() {
   return (
     <motion.section
-      className="flex items-center flex-col p-4 h-svh"
-      initial="hidden"
-      whileInView="visible"
-      transition={{ staggerChildren: 0.04 }}
+      className="flex items-center flex-col p-4 h-screen"
+      initial={{
+        opacity: 0,
+      }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ margin: "-70px" }}
+      transition={{ duration: 0.9 }}
     >
       <motion.article
         transition={transition}

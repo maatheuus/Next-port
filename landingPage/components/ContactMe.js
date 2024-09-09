@@ -1,8 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import { motion, useScroll, useTransform } from "framer-motion";
 import {
   Form,
   FormControl,
@@ -13,7 +9,10 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Toaster } from "@/components/ui/toaster";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
 
 import { toast } from "@/hooks/use-toast";
 import Heading from "./Heading";
@@ -57,7 +56,7 @@ function ContactMe() {
       whileInView="visible"
       transition={{ staggerChildren: 0.04 }}
       style={{ scale }}
-      className="mt-12 h-full"
+      className="mt-12 h-svh"
     >
       <motion.div
         transition={transition}

@@ -14,19 +14,14 @@ function AboutMe() {
 
   return (
     <motion.section
+      className="p-4"
       initial="hidden"
       whileInView="visible"
-      className="p-4"
-      transition={{ staggerChildren: 0.04 }}
-      // style={{ scale }}
+      transition={transition}
+      variants={variants}
     >
       <Heading label="Sobre mim." className="mb-6" />
-      <motion.div
-        style={{ scaleY: scrollYProgress }}
-        transition={transition}
-        variants={variants}
-        className="w-full col-span-1"
-      >
+      <motion.div className="w-full col-span-1">
         <p className="hyphens-auto text-xl strong mt-4">
           Sou um desenvolvedor <strong>full-stack</strong> e estou mergulhado no
           mundo do desenvolvimento web. Com habilidades intermediárias em
