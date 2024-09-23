@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaCalendarAlt } from "react-icons/fa";
+import { Calendar } from "lucide-react";
 import { COURSES_DATA } from "@/app/_util/utility";
 import Heading from "@/landingPage/pages/Heading";
 
@@ -30,7 +30,7 @@ function Courses() {
                     </Link>
                   </h3>
                   <p className="inline-flex items-center gap-x-1">
-                    <FaCalendarAlt className="inline" />{" "}
+                    <Calendar className="inline" />{" "}
                     <span className="underline text-lg">{course.date}</span>
                   </p>
                 </div>

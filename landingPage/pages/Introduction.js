@@ -1,8 +1,6 @@
 import Footer from "@/components/Footer";
-import scrollIcon from "@/public/svg/scroll-black.gif";
 import { motion } from "framer-motion";
 import { Link } from "next-view-transitions";
-import Image from "next/image";
 import Heading from "./Heading";
 
 const transition = { duration: 1, ease: [0.25, 0.1, 0.25, 1] };
