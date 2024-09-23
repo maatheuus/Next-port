@@ -1,9 +1,9 @@
 "use client";
 
-import AboutMe from "@/landingPage/components/AboutMe";
-import ContactMe from "@/landingPage/components/ContactMe";
-import Introduction from "@/landingPage/components/Introduction";
-import MyProjects from "@/landingPage/components/MyProjects";
+import AboutMe from "@/landingPage/pages/AboutMe";
+import ContactMe from "@/landingPage/pages/ContactMe";
+import Introduction from "@/landingPage/pages/Introduction";
+import MyProjects from "@/landingPage/pages/MyProjects";
 
 function Page() {
   return (

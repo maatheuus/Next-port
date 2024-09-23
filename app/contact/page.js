@@ -17,7 +17,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 
 import { toast } from "@/hooks/use-toast";
-import Heading from "@/landingPage/components/Heading";
+import Heading from "@/landingPage/pages/Heading";
 
 const FormSchema = z.object({
   username: z.string().min(2, {

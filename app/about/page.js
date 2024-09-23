@@ -1,6 +1,6 @@
 import Footer from "@/components/Footer";
 import Courses from "@/components/Courses";
-import Heading from "@/landingPage/components/Heading";
+import Heading from "@/landingPage/pages/Heading";
 
 export const metadata = {
   title: "About Me",

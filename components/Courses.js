@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { FaCalendarAlt } from "react-icons/fa";
 import { COURSES_DATA } from "@/app/_util/utility";
-import Heading from "@/landingPage/components/Heading";
+import Heading from "@/landingPage/pages/Heading";
 
 function Courses() {
   return (
