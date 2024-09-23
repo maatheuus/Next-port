@@ -43,7 +43,7 @@ function MyProjects() {
 
       <div className="flex flex-col justify-center mt-10">
         <Suspense fallback={<Spinner />}>
-          <motion.ul className="grid list-none overflow-hidden">
+          <motion.ul className="grid list-none overflow-hidden bg-red-800">
             {firstTwoProjects.map((project) => {
               return (
                 <motion.li key={project.id}>

@@ -1,4 +1,4 @@
-import { FaEnvelope, FaLinkedin, FaGithub, FaArrowRight } from "react-icons/fa";
+import { Mail, Linkedin, Github, ArrowRight } from "lucide-react";
 import { ActiveLink } from "./ActiveLink";
 import ButtonIcon from "./ButtonIcon";
 
@@ -10,7 +10,7 @@ function Footer({ label, to }) {
         <ActiveLink href={to}>
           <p className="text-lg hover:underline">
             {label}
-            <FaArrowRight className="inline w-4 h-4 forward text-svg-fill" />
+            <ArrowRight className="inline w-4 h-4 forward text-svg-fill" />
           </p>
         </ActiveLink>
       </div>
@@ -19,7 +19,7 @@ function Footer({ label, to }) {
         <ul className="list-none flex items-center gap-8">
           <li>
             <ButtonIcon href="mailto:matts14smkd@gmail.com" target="_black">
-              <FaEnvelope className="text-svg-fill w-5 h-5" />
+              <Mail className="text-svg-fill w-5 h-5" />
             </ButtonIcon>
           </li>
 
@@ -28,13 +28,13 @@ function Footer({ label, to }) {
               href="https://www.linkedin.com/in/matheusmaat/"
               target="_black"
             >
-              <FaLinkedin className="text-svg-fill w-5 h-5" />
+              <Linkedin className="text-svg-fill w-5 h-5" />
             </ButtonIcon>
           </li>
 
           <li>
             <ButtonIcon href="https://github.com/maatheuus" target="_black">
-              <FaGithub className="text-svg-fill w-5 h-5" />
+              <Github className="text-svg-fill w-5 h-5" />
             </ButtonIcon>
           </li>
         </ul>

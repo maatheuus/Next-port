@@ -11,6 +11,17 @@
   .text-hover {
     @apply hover:text-hoverColor transition-all hover:duration-150;
   }
+
+  ::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+    background: black;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #fff;
+    -webkit-border-radius: 1ex;
+  }
 }
 
 /* Animation for projects */

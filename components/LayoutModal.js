@@ -1,7 +1,6 @@
 import { useOpenModal } from "@/context/ModalContext";
+import { CircleChevronLeft, Github, Globe } from "lucide-react";
 import Link from "next/link";
-import { BiWorld } from "react-icons/bi";
-import { RiArrowLeftCircleLine, RiGithubFill } from "react-icons/ri";
 import styled from "styled-components";
 
 function LayoutModal({ project }) {
@@ -11,13 +10,13 @@ function LayoutModal({ project }) {
   const { closeProject } = useOpenModal();
 
   return (
-    <LayoutPage className="max-h-full overflow-x-auto px-9 py-7 flex flex-col gap-6">
+    <LayoutPage className="max-h-full overflow-x-auto px-9 py-7 flex flex-col gap-6 z-[9999]">
       <div className="border-b pb-4">
         <button
           onClick={closeProject}
           className="flex items-center justify-between pb-4 w-full"
         >
-          <RiArrowLeftCircleLine className="text-svg-fill w-7 h-7" />
+          <CircleChevronLeft className="text-svg-fill w-7 h-7" />
           <p className="text-2xl text-btn-color">Go Back</p>
         </button>
       </div>
@@ -29,8 +28,9 @@ function LayoutModal({ project }) {
         <img
           className="object-cover overflow-hidden w-full h-full rounded-lg"
           src={image?.src}
-          alt="image of the project"
-          loading="lazy"
+          alt={`${title} image`}
+          width={400}
+          height={400}
         />
       </div>
       <div>
@@ -53,7 +53,7 @@ function LayoutModal({ project }) {
       <div>
         <div className="mb-7">
           <div className="flex gap-x-3">
-            <BiWorld className="w-6 h-6 text-svg-fill" />
+            <Globe className="w-6 h-6 text-svg-fill" />
             <Link href={link || ""} target="_black">
               <h3 className="uppercase text-base">Website</h3>
             </Link>
@@ -68,7 +68,7 @@ function LayoutModal({ project }) {
         </div>
         <div>
           <div className="flex gap-x-3">
-            <RiGithubFill className="w-6 h-6 text-svg-fill" />
+            <Github className="w-6 h-6 text-svg-fill" />
             <Link href={github || ""} target="_black">
               <h3 className="uppercase text-base">Github</h3>
             </Link>
