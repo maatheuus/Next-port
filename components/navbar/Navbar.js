@@ -1,15 +1,16 @@
 "use client";
 
-import Menu from "@/components/Menu";
+import Menu from "@/components/menu/Menu";
 import { useOpenMenu } from "@/context/MenuContext";
 import { Logs } from "lucide-react";
 import DarkMode from "./DarkMode";
 import Logo from "./Logo";
 import Navigation from "./Navigation";
 import { Button } from "@/components/ui/button";
+import ButtonMenu from "../menu/ButtonMenu";
 
 function Navbar() {
-  const { menuIsOpen, openMenu } = useOpenMenu();
+  const { menuIsOpen } = useOpenMenu();
 
   return (
     <div className="relative pt-6">
@@ -20,19 +21,7 @@ function Navbar() {
           <DarkMode />
         </div>
       </nav>
-
-      <div className="md:hidden block relative h-10 w-auto">
-        {!menuIsOpen && (
-          <Button
-            variant="ghost"
-            className="absolute right-2 bottom-1 z-50"
-            onClick={openMenu}
-          >
-            <Logs className="w-10 h-8" />
-          </Button>
-        )}
-      </div>
-      {menuIsOpen && <Menu />}
+      <Menu />
     </div>
   );
 }

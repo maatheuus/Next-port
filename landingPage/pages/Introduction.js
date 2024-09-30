@@ -2,6 +2,7 @@ import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Link } from "next-view-transitions";
 import Heading from "./Heading";
+import TypeTextAnimation from "../components/TypeTextAnimation";
 
 const transition = { duration: 1, ease: [0.25, 0.1, 0.25, 1] };
 const variants = {
@@ -25,7 +26,7 @@ function Introduction() {
         className="mt-24"
       >
         <div className="w-3/4 mx-auto">
-          <Heading label="Olá, eu sou o Matheus!" className="mb-3" />
+          <Heading label={<TypeTextAnimation />} className="mb-3" />
           <motion.p
             transition={transition}
             variants={variants}
@@ -44,16 +45,13 @@ function Introduction() {
             variants={variants}
             className="text-lg"
           >
-            Quando não estou programando, você pode me encontrar lendo blogs ou
+            Quando não estou programando, você pode me encontrar lendo livros ou
             balançando no ritmo do rap e do jazz, perdendo-me no fluxo cativante
             das melodias.
           </motion.p>
           <Footer label="Ver mais sobre mim" to="/about" />
         </div>
       </motion.article>
-      {/* <div className="w-full mx-auto flex justify-center items-center">
-        <Image width={35} height={35} src={scrollIcon} alt="Gif animated" />
-      </div> */}
     </motion.section>
   );
 }

@@ -4,25 +4,31 @@ import { Link } from "next-view-transitions";
 
 const transition = { duration: 1, ease: [0.25, 0.1, 0.25, 1] };
 const variants = {
-  hidden: { filter: "blur(10px)", transform: "translateY(20%)", opacity: 0 },
-  visible: { filter: "blur(0)", transform: "translateY(0)", opacity: 1 },
+  hidden: { filter: "blur(10px)", transform: "translateX(-100%)", opacity: 0 },
+  visible: { filter: "blur(0)", transform: "translateX(0)", opacity: 1 },
 };
 
 function AboutMe() {
   const { scrollYProgress } = useScroll();
-  const scale = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+  // const scale = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
   return (
-    <motion.section
-      className="p-4"
-      initial="hidden"
-      whileInView="visible"
-      transition={transition}
-      variants={variants}
-    >
-      <Heading label="Sobre mim." className="mb-6" />
-      <motion.div className="w-full col-span-1">
-        <p className="hyphens-auto text-xl strong mt-4">
+    <section className="p-4 h-screen">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        transition={transition}
+        variants={variants}
+      >
+        <Heading label="Sobre mim." className="mb-6" />
+      </motion.div>
+
+      <motion.div
+        initial={{ y: "100%", opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={transition}
+      >
+        <p className="hyphens-auto text-lg strong mt-4">
           Sou um desenvolvedor <strong>full-stack</strong> e estou mergulhado no
           mundo do desenvolvimento web. Com habilidades intermediárias em
           tecnologias como <strong>React.js</strong>, <strong>Next.js</strong>,{" "}
@@ -39,7 +45,7 @@ function AboutMe() {
           onde possa realmente fazer a diferença.
         </p>
       </motion.div>
-    </motion.section>
+    </section>
   );
 }
 

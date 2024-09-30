@@ -89,11 +89,54 @@
     }
   }
 }
+
 @layer components {
   .container {
     @apply mx-auto max-w-6xl xl:max-w-7xl px-8;
   }
 }
+
+/* Animation for menu */
+@layer utilities {
+  .elementMenu {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.elementMenu:hover .perspectiveText {
+  transform: rotateX(90deg);
+  p:nth-of-type(1) {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  p:nth-of-type(2) {
+    opacity: 1;
+  }
+}
+.perspectiveText {
+  transform-style: preserve-3d;
+  transition: transform 0.75s cubic-bezier(0.76, 0, 0.24, 1);
+
+  p {
+    transition: all 0.75s cubic-bezier(0.76, 0, 0.24, 1);
+    pointer-events: none;
+    text-transform: uppercase;
+  }
+}
+.perspectiveText > p:nth-of-type(2) {
+  position: absolute;
+  transform-origin: bottom center;
+  transform: rotateX(-90deg) translateY(9px);
+  opacity: 0;
+}
+
+.linkMenu {
+  perspective: 120px;
+  perspective-origin: bottom;
+}
+
 /* Geral classes */
 @layer components {
   .strong > strong {
