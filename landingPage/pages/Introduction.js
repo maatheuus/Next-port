@@ -1,25 +1,17 @@
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Link } from "next-view-transitions";
-import Heading from "./Heading";
 import TypeTextAnimation from "../components/TypeTextAnimation";
+import Heading from "./Heading";
 
 const transition = { duration: 1, ease: [0.25, 0.1, 0.25, 1] };
 const variants = {
   hidden: { filter: "blur(10px)", transform: "translateY(20%)", opacity: 0 },
   visible: { filter: "blur(0)", transform: "translateY(0)", opacity: 1 },
 };
-function Introduction() {
+function Introduction(props) {
   return (
-    <motion.section
-      className="flex items-center flex-col p-4 h-screen"
-      initial={{
-        opacity: 0,
-      }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ margin: "-70px" }}
-      transition={{ duration: 0.9 }}
-    >
+    <section {...props} className="flex items-center flex-col p-4">
       <motion.article
         transition={transition}
         variants={variants}
@@ -52,7 +44,7 @@ function Introduction() {
           <Footer label="Ver mais sobre mim" to="/about" />
         </div>
       </motion.article>
-    </motion.section>
+    </section>
   );
 }
 

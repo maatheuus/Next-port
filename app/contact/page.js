@@ -18,6 +18,7 @@ import { z } from "zod";
 
 import { toast } from "@/hooks/use-toast";
 import Heading from "@/landingPage/pages/Heading";
+import Layout from "../_layout";
 
 const FormSchema = z.object({
   username: z.string().min(2, {
@@ -50,81 +51,86 @@ function Page() {
   }
 
   return (
-    <motion.section
-      initial="hidden"
-      whileInView="visible"
-      transition={{ staggerChildren: 0.04 }}
-    >
-      <motion.div
-        transition={transition}
-        variants={variants}
-        className="flex flex-col gap-4"
+    <Layout label="Yes! Contact me">
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        transition={{ staggerChildren: 0.04 }}
       >
-        <Heading label="Contato." />
-        <div>
-          <p className="text-base text-primary-gray">
-            Mande uma mensagem por aqui ou diretamente{" "}
-            <b> matts14smkd@gmail.com</b>.
-          </p>
-        </div>
-        <div style={{ maxWidth: "80%" }}>
-          <Form {...form}>
-            <form
-              method="POST"
-              action="https://formsubmit.co/matts14smkd@gmail.com"
-              onSubmit={form.handleSubmit(onSubmit)}
-              className="text-xl space-y-2"
-            >
-              <FormField
-                control={form.control}
-                name="username"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Seu nome</FormLabel>
-                    <FormControl>
-                      <Input placeholder="Escreva seu nome" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="email"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Email</FormLabel>
-                    <FormControl>
-                      <Input placeholder="Escreva seu email" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="description"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Sua mensagem</FormLabel>
-                    <FormControl>
-                      <Textarea placeholder="Escreva sua mensagem" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <Button type="submit">Enviar</Button>
-            </form>
-          </Form>
-        </div>
+        <motion.div
+          transition={transition}
+          variants={variants}
+          className="flex flex-col gap-4"
+        >
+          <Heading label="Contato." />
+          <div>
+            <p className="text-base text-primary-gray">
+              Mande uma mensagem por aqui ou diretamente{" "}
+              <b> matts14smkd@gmail.com</b>.
+            </p>
+          </div>
+          <div style={{ maxWidth: "80%" }}>
+            <Form {...form}>
+              <form
+                method="POST"
+                action="https://formsubmit.co/matts14smkd@gmail.com"
+                onSubmit={form.handleSubmit(onSubmit)}
+                className="text-xl space-y-2"
+              >
+                <FormField
+                  control={form.control}
+                  name="username"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Seu nome</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Escreva seu nome" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Email</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Escreva seu email" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="description"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Sua mensagem</FormLabel>
+                      <FormControl>
+                        <Textarea
+                          placeholder="Escreva sua mensagem"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <Button type="submit">Enviar</Button>
+              </form>
+            </Form>
+          </div>
 
-        <footer className="h-full flex items-end justify-end">
-          <p className="mr-2">@2024 Matheus</p>
-          <p>&copy; Todos os direitos reservados</p>
-        </footer>
-      </motion.div>
-    </motion.section>
+          <footer className="h-full flex items-end justify-end">
+            <p className="mr-2">@2024 Matheus</p>
+            <p>&copy; Todos os direitos reservados</p>
+          </footer>
+        </motion.div>
+      </motion.section>
+    </Layout>
   );
 }
 

@@ -7,12 +7,22 @@ import { listMenu } from "./utils/utils";
 
 function LinksMenu() {
   const { closeMenu } = useOpenMenu();
+
   return (
     <div className="flex flex-col justify-between pt-24 px-10 pb-11 h-full box-border">
       <ul className="flex gap-y-5 flex-col w-full h-full">
         {listMenu.map((item, i) => (
           <li key={item.label} className="linkMenu">
             <motion.div
+              whileHover={{
+                rotateX: "12deg",
+                scale: 1.1,
+                transition: { duration: 0.2 },
+              }}
+              whileTap={{
+                scale: 0.95,
+                transition: { duration: 0.2 },
+              }}
               onClick={closeMenu}
               custom={i}
               variants={perspective}
@@ -20,7 +30,7 @@ function LinksMenu() {
               animate="enter"
               exit="exit"
             >
-              <Link className="text-3xl sm:text-5xl" href={item.href}>
+              <Link className="text-5xl" href="#">
                 {item.label}
               </Link>
             </motion.div>
