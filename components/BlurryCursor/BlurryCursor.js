@@ -54,8 +54,9 @@ export default function BlurryCursor({ isActive }) {
           height: size,
           filter: `blur(${isActive ? 30 : 0}px)`,
           transition: `height 0.3s ease-out, width 0.3s ease-out, filter 0.3s ease-out`,
+          // boxShadow: "rgba(255, 255, 255, 0.6) 0px 0px 25px 15px",
         }}
-        className="top-0 left-0 fixed rounded-full pointer-events-none dark:bg-slate-200 bg-[#141516]"
+        className="top-0 left-0 fixed rounded-full pointer-events-none border shadow-[#141516_0px_0px_25px_15px] dark:shadow-[#ffffff_0px_0px_25px_15px]"
         ref={circle}
       />
     </div>

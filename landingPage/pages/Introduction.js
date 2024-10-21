@@ -1,7 +1,6 @@
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Link } from "next-view-transitions";
-import TypeTextAnimation from "../components/TypeTextAnimation";
 import Heading from "./Heading";
 
 const transition = { duration: 1, ease: [0.25, 0.1, 0.25, 1] };
@@ -18,7 +17,8 @@ function Introduction(props) {
         className="mt-24"
       >
         <div className="w-3/4 mx-auto">
-          <Heading label={<TypeTextAnimation />} className="mb-3" />
+          <Heading label="Hey there, I'm Maat." className="mb-3 text-2xl" />
+          {/* <Heading label={<TypeTextAnimation />} className="mb-3" /> */}
           <motion.p
             transition={transition}
             variants={variants}
