@@ -1,10 +1,10 @@
 import { Baloo_2 } from "next/font/google";
 
-import "@/styles/globals.css";
 import Providers from "@/app/Providers";
-import { Toaster } from "@/components/ui/toaster";
-import { ViewTransitions } from "next-view-transitions";
 import Navbar from "@/components/navbar/Navbar";
+import { Toaster } from "@/components/ui/toaster";
+import "@/styles/globals.css";
+import { ViewTransitions } from "next-view-transitions";
 
 const baloo = Baloo_2({
   subsets: ["latin"],
@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
           <Providers>
             <div id="modal"></div>
             <Navbar />
-            <main className="container mx-auto py-8 px-2 sm:px-12 ">
+            <main>
               {children}
             </main>
             <Toaster />

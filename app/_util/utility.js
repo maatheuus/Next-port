@@ -1,9 +1,8 @@
+import bookLife from "@/public/book-life-2.png";
 import trillo from "@/public/hotel-trillo.png";
-import weather from "@/public/weather.png";
+import movieLife from "@/public/movie-life.png";
 import fastPizza from "@/public/react-fast-pizza.png";
 import vacationPlans from "@/public/vactions-plan.png";
-import bookLife from "@/public/book-life-2.png";
-import movieLife from "@/public/movie-life.png";
 
 export const projects = [
   {
@@ -84,19 +83,6 @@ export const projects = [
       "tailwind",
     ],
   },
-  // {
-  //   id: 6,
-  //   title: "Weather App",
-  //   classImg: " !h-[318px]",
-  //   description:
-  //     "Procure a previsão do tempo na sua cidade ou em qualquer lugar do mundo",
-  //   about:
-  //     "Esse site foi feito para facilitar quando você quiser saber como anda o clima na sua cidade ou em qualquer cidade do mundo. Com um design minimalista e agradável você se encontra fácil no site. (informações em inglês, até o momento)",
-  //   image: weather,
-  //   link: "https://maatheuus.github.io/WeatherApp/",
-  //   github: "https://github.com/maatheuus/WeatherApp",
-  //   technologies: ["javaScript", "html", "css"],
-  // },
 ];
 
 export const COURSES_DATA = [

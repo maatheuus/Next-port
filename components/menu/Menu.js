@@ -3,6 +3,7 @@
 import { useOpenMenu } from "@/context/MenuContext";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect } from "react";
+import BlurryCursor from "../BlurryCursor/BlurryCursor";
 import ButtonMenu from "./ButtonMenu";
 import LinksMenu from "./LinksMenu";
 import { menu } from "./utils/anim";
@@ -19,7 +20,7 @@ function Menu() {
   }, [menuIsOpen]);
 
   return (
-    <div className="md:hidden fixed top-12 right-12 z-50">
+    <div className="fixed sm:block top-[60px] right-14 z-50">
       <motion.menu
         className="w-[348px] h-[650px] bg-black text-white dark:bg-white dark:text-black rounded-3xl relative overflow-hidden transition-colors duration-1000"
         initial="closed"
@@ -33,6 +34,7 @@ function Menu() {
       </motion.menu>
 
       <ButtonMenu />
+      <BlurryCursor />
     </div>
   );
 }
