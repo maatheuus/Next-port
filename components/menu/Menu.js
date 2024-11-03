@@ -3,6 +3,7 @@
 import { useOpenMenu } from "@/context/MenuContext";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect } from "react";
+import BlurryCursor from "../BlurryCursor/BlurryCursor";
 import ButtonMenu from "./ButtonMenu";
 import LinksMenu from "./LinksMenu";
 import { menu } from "./utils/anim";
@@ -33,6 +34,7 @@ function Menu() {
       </motion.menu>
 
       <ButtonMenu />
+      <BlurryCursor />
     </div>
   );
 }

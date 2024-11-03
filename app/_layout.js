@@ -1,6 +1,5 @@
 "use client";
 
-import Preloader from "@/components/loader/Preloader";
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 
@@ -20,7 +19,7 @@ function Layout({ label, children }) {
   return (
     <>
       <AnimatePresence mode="wait">
-        {isLoading && <Preloader label={label} />}
+        {/* {isLoading && <Preloader label={label} />} */}
       </AnimatePresence>
       {children}
     </>

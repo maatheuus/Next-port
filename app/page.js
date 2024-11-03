@@ -1,6 +1,5 @@
 "use client";
 
-import BlurryCursor from "@/components/BlurryCursor/BlurryCursor";
 import Footer from "@/landingPage/components/Footer";
 import AboutMe from "@/landingPage/pages/AboutMe";
 import ContactMe from "@/landingPage/pages/ContactMe";
@@ -33,7 +32,6 @@ function Page() {
     <Layout label="Welcome">
       <div className="container mx-auto py-8 px-2 sm:px-12">
         {/* <BlurryCursor isActive={isActive} /> */}
-        <BlurryCursor />
         <Introduction
           onMouseOver={() => {
             setIsActive(true);
